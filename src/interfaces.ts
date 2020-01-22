@@ -1,4 +1,4 @@
-import { EventCategory } from "./enums";
+import { EventCategory } from './enums';
 
 export interface IDailyEventsList {
 	[index: number]: {
@@ -6,5 +6,6 @@ export interface IDailyEventsList {
 		start: Date;
 		end: Date;
 		category: EventCategory;
+		description: string;
 	};
 }

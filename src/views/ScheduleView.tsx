@@ -1,4 +1,5 @@
 import React from 'react';
+import './ScheduleView.css';
 
 import TimelineComponent from '../components/TimelineComponent';
 import EventList from '../components/EventList';

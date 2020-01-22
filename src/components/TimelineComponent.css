@@ -1,0 +1,14 @@
+#timeline {
+	position: relative;
+	overflow: auto;
+	outline: 1px solid #ddd;
+	height: 300px;
+}
+
+#timeline-slider {
+	position: absolute;
+	height: 100%;
+	width: 2px;
+	background: red;
+	opacity: 50%;
+}

@@ -7,6 +7,8 @@ import { identity } from '../utils';
 
 import { firstDay } from '../data/schedule';
 
+import ModalDialog from '../components/ModalDialog';
+
 const events = firstDay.events;
 const categoryBuckets = processCategoryBuckets(events);
 const minutes = 60;
@@ -18,6 +20,17 @@ const timeLabels = Array.from(Array(25).keys()).map(
 	i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`
 );
 const oneMinute = 60000;
+
+const overflowColor = 'deepskyblue';
+
+function to12HourTime(date: Date) {
+	const hours = date.getHours();
+	const minutes = date.getMinutes();
+
+	return `${hours % 12 === 0 ? 12 : hours % 12}:${
+		minutes < 10 ? '0' : ''
+	}${minutes}${hours % 24 < 12 ? 'AM' : 'PM'}`;
+}
 
 function processCategoryBuckets(events: IEvent[]) {
 	interface ICategoryEventList {
@@ -36,7 +49,16 @@ function processCategoryBuckets(events: IEvent[]) {
 class TimelineComponent extends React.Component {
 	scrollContainerRef: React.RefObject<HTMLDivElement>;
 	interval: NodeJS.Timeout;
-	state: any;
+	state: {
+		hours: number;
+		minutes: number;
+		width: number;
+		height: number;
+		modalShow: boolean;
+		modalHeading: string;
+		modalTime: string;
+		modalBody: string;
+	};
 
 	constructor(props: any) {
 		super(props);
@@ -50,7 +72,11 @@ class TimelineComponent extends React.Component {
 			hours: new Date().getHours(),
 			minutes: new Date().getMinutes(),
 			width: window.innerWidth,
-			height: window.innerHeight
+			height: window.innerHeight,
+			modalShow: false,
+			modalHeading: '',
+			modalTime: '',
+			modalBody: ''
 		};
 	}
 
@@ -101,6 +127,13 @@ class TimelineComponent extends React.Component {
 	render() {
 		return (
 			<div id="timeline" ref={this.scrollContainerRef}>
+				<ModalDialog
+					show={this.state.modalShow}
+					onHide={() => this.setState({ modalShow: false })}
+					heading={this.state.modalHeading}
+					time={this.state.modalTime}
+					body={this.state.modalBody}
+				/>
 				<div id="timeline-label-container">
 					{timeLabels.map((label, index) => (
 						<div key={`timeline-label-${index}`}>
@@ -126,11 +159,6 @@ class TimelineComponent extends React.Component {
 					}}
 				></div>
 				<div id="timeline-tracks-container">
-					{events.map((event, index) => (
-						<div
-							key={`timeline-track-${event.category}-${index}`}
-						/>
-					))}
 					{Object.keys(categoryBuckets).map(
 						(activityKey, activityIndex) => (
 							<div
@@ -156,6 +184,18 @@ class TimelineComponent extends React.Component {
 													trackStartHeight +
 													trackSpace * activityIndex
 											}}
+											onClick={() =>
+												this.setState({
+													modalShow: true,
+													modalHeading: event.name,
+													modalTime: `${to12HourTime(
+														event.start
+													)} - ${to12HourTime(
+														event.end
+													)}`,
+													modalBody: event.description
+												})
+											}
 										>
 											<p>{event.name}</p>
 											<div
@@ -165,43 +205,31 @@ class TimelineComponent extends React.Component {
 													background:
 														EventCategoryColor[
 															activityKey
-														]
+														] || overflowColor
 												}}
 											>
-												<svg
-													className="timeline-track-line-end-left"
-													height="10"
-													width="10"
-												>
-													<circle
-														className="timeline-track-line-end-left"
-														cx="5"
-														cy="5"
-														r="4"
-														fill={
-															EventCategoryColor[
-																activityKey
-															]
-														}
-													/>
-												</svg>
-												<svg
-													className="timeline-track-line-end-right"
-													height="10"
-													width="10"
-												>
-													<circle
-														className="timeline-track-line-end-right"
-														cx="5"
-														cy="5"
-														r="4"
-														fill={
-															EventCategoryColor[
-																activityKey
-															]
-														}
-													/>
-												</svg>
+												{['left', 'right'].map(
+													lineEnd => (
+														<svg
+															className={`timeline-track-line-end-${lineEnd}`}
+															height="10"
+															width="10"
+														>
+															<circle
+																className={`timeline-track-line-end-${lineEnd}`}
+																cx="5"
+																cy="5"
+																r="4"
+																fill={
+																	EventCategoryColor[
+																		activityKey
+																	] ||
+																	overflowColor
+																}
+															/>
+														</svg>
+													)
+												)}
 											</div>
 										</div>
 									)

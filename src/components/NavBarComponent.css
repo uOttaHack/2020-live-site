@@ -1,3 +1,10 @@
 .mr-auto a {
 	padding: 8px;
 }
+
+#navbar-hidden-overlay {
+	position: absolute;
+	width: 100%;
+	height: calc(100vh - 256px);
+	z-index: 10000;
+}

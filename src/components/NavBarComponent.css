@@ -5,6 +5,7 @@
 #navbar-hidden-overlay {
 	position: absolute;
 	width: 100%;
+	/* TODO: retrieve final size (after animation completes) instead of hard-coding it */
 	height: calc(100vh - 256px);
 	z-index: 10000;
 }

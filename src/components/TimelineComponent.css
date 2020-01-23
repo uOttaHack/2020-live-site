@@ -40,25 +40,26 @@
 }
 
 .timeline-track-item p {
-	margin: 4px;
-	font-size: 8pt;
+	margin: 0;
+	padding: 4px 4px;
+	font-size: 10pt;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
 .timeline-track-line {
-	height: 2px;
+	height: 4px;
 }
 
 .timeline-track-line-end-left {
 	position: absolute;
 	left: -5px;
-	bottom: -4px;
+	bottom: -3px;
 }
 
 .timeline-track-line-end-right {
 	position: absolute;
 	right: -5px;
-	bottom: -4px;
+	bottom: -3px;
 }

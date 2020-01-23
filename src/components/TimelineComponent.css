@@ -5,10 +5,59 @@
 	height: 300px;
 }
 
+.timeline-label,
+.timeline-label-marker {
+	position: absolute;
+}
+
+.timeline-label {
+	top: 4px;
+	font-size: 10pt;
+}
+
+.timeline-label-marker {
+	height: 10%;
+	width: 2px;
+	background: rgba(0, 0, 0, 0.1);
+}
+
 #timeline-slider {
 	position: absolute;
 	height: 100%;
 	width: 2px;
-	background: red;
+	background: rgba(255, 0, 0, 0.5);
+}
+
+.timeline-track-item {
+	position: absolute;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.timeline-track-item:hover {
 	opacity: 50%;
+}
+
+.timeline-track-item p {
+	margin: 4px;
+	font-size: 8pt;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.timeline-track-line {
+	height: 2px;
+}
+
+.timeline-track-line-end-left {
+	position: absolute;
+	left: -5px;
+	bottom: -4px;
+}
+
+.timeline-track-line-end-right {
+	position: absolute;
+	right: -5px;
+	bottom: -4px;
 }

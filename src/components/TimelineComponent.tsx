@@ -12,7 +12,7 @@ const labelMarkerOffset = 4;
 const labelSpace = 90;
 const trackSpace = 40;
 const trackStartHeight = 60;
-const timeLabels = Array.from(Array(25).keys()).map(i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`);
+const timeLabels = Array.from(Array(24).keys()).map(i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`);
 const oneMinute = 60000;
 
 const overflowColor = 'deepskyblue';
@@ -115,6 +115,7 @@ class TimelineComponent extends React.Component<PropTypes> {
 	}
 
 	render() {
+		// TODO: fix sketch
 		this.state.categoryBuckets = processCategoryBuckets(this.props.day.events);
 
 		return (
@@ -129,14 +130,15 @@ class TimelineComponent extends React.Component<PropTypes> {
 				<div id="timeline-label-container">
 					{timeLabels.map((label, index) => (
 						<div key={`timeline-label-${index}`}>
-							<div
+							<p
 								className="timeline-label"
 								style={{
-									left: index * labelSpace + labelMarkerOffset
+									left: index * labelSpace + labelMarkerOffset,
+									width: labelSpace
 								}}
 							>
 								{label}
-							</div>
+							</p>
 							<div className="timeline-label-marker" style={{ left: index * labelSpace }} />
 						</div>
 					))}

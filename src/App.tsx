@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { RoutePath } from "./enums";
+import { RoutePath } from './enums';
 
 import {
 	Redirect,
@@ -23,14 +23,26 @@ const App: React.FC = () => {
 		<div className="App">
 			<Router>
 				<NavBarComponent />
-				<Switch>
-					<Route exact path={RoutePath.Home} component={InfoView} />
-					<Route path={RoutePath.Schedule} component={ScheduleView} />
-					<Route path={RoutePath.Map} component={MapView} />
-					<Route path={RoutePath.Food} component={FoodMenuView} />
-					<Route path={RoutePath.Contact} component={ContactView} />
-					<Redirect from="*" to="/" />
-				</Switch>
+				<div id="switch">
+					<Switch>
+						<Route
+							exact
+							path={RoutePath.Home}
+							component={InfoView}
+						/>
+						<Route
+							path={RoutePath.Schedule}
+							component={ScheduleView}
+						/>
+						<Route path={RoutePath.Map} component={MapView} />
+						<Route path={RoutePath.Food} component={FoodMenuView} />
+						<Route
+							path={RoutePath.Contact}
+							component={ContactView}
+						/>
+						<Redirect from="*" to="/" />
+					</Switch>
+				</div>
 			</Router>
 		</div>
 	);

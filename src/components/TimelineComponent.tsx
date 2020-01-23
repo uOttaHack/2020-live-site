@@ -167,6 +167,7 @@ class TimelineComponent extends React.Component {
 								{categoryBuckets[activityKey].map(
 									(event, eventIndex) => (
 										<div
+											key={`timeline-track-${activityKey}-${eventIndex}`}
 											className="timeline-track-item"
 											style={{
 												width:
@@ -211,6 +212,7 @@ class TimelineComponent extends React.Component {
 												{['left', 'right'].map(
 													lineEnd => (
 														<svg
+															key={`timeline-line-${lineEnd}`}
 															className={`timeline-track-line-end-${lineEnd}`}
 															height="10"
 															width="10"

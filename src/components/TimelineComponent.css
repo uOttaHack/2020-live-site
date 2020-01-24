@@ -36,7 +36,7 @@
 }
 
 .timeline-track-item:hover {
-	opacity: 50%;
+	opacity: 0.5;
 }
 
 .timeline-track-item p {

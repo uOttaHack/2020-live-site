@@ -9,7 +9,8 @@ import Color from '../colors';
 import ModalDialog from '../components/ModalDialog';
 
 const minutes = 60;
-const labelMarkerOffset = 4;
+const timeLabelOffset = 4;
+const timeMarkerOffset = 1;
 const labelSpace = 90;
 const trackSpace = 40;
 const trackStartHeight = 60;
@@ -114,13 +115,16 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 							<p
 								className="timeline-label"
 								style={{
-									left: index * labelSpace + labelMarkerOffset,
+									left: index * labelSpace + timeLabelOffset,
 									width: labelSpace
 								}}
 							>
 								{label}
 							</p>
-							<div className="timeline-label-marker" style={{ left: index * labelSpace }} />
+							<div
+								className="timeline-label-marker"
+								style={{ left: index * labelSpace - timeMarkerOffset }}
+							/>
 						</div>
 					))}
 				</div>

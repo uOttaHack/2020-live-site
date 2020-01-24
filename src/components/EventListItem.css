@@ -3,6 +3,10 @@
 	border-top: 1px solid #ddd;
 }
 
+.event-item:hover {
+	background: rgba(0, 0, 0, 0.02);
+}
+
 .event-item-content {
 	position: relative;
 	height: 72px;
@@ -12,11 +16,14 @@
 
 .event-item-content:hover {
 	transform: translateX(4px);
-	background: rgba(0, 0, 0, 0.02);
 }
 
 .event-item-content > svg {
 	position: absolute;
 	top: 40%;
 	left: 24px;
+}
+
+.event-item-content > p {
+	margin: 0;
 }

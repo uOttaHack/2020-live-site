@@ -41,13 +41,13 @@ export const firstDay: IEventDay = {
 			name: 'Team Formation',
 			start: new Date('2020-02-07T22:30'),
 			duration: 0,
-			category: EventCategory.Hacker,
+			category: EventCategory.Activity,
 			location: '',
 			description: ''
 		},
 		{
 			name: 'Hacking Begins',
-			start: new Date('2020-02-07T21:30'),
+			start: new Date('2020-02-07T23:00'),
 			duration: 0,
 			category: EventCategory.Hacker,
 			location: '',

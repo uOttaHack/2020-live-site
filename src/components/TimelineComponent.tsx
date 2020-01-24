@@ -3,7 +3,8 @@ import './TimelineComponent.css';
 
 import { PropTypesDay, IEvent, ICategoryEventList } from '../interfaces';
 import { EventCategoryColor } from '../enums';
-import { identity } from '../utils';
+import { identity, to12HourTime } from '../utils';
+import Color from '../colors';
 
 import ModalDialog from '../components/ModalDialog';
 
@@ -14,15 +15,6 @@ const trackSpace = 40;
 const trackStartHeight = 60;
 const timeLabels = Array.from(Array(24).keys()).map(i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`);
 const oneMinute = 60000;
-
-const overflowColor = 'deepskyblue';
-
-function to12HourTime(date: Date) {
-	const hours = date.getHours();
-	const minutes = date.getMinutes();
-
-	return `${hours % 12 === 0 ? 12 : hours % 12}:${minutes < 10 ? '0' : ''}${minutes}${hours % 24 < 12 ? 'AM' : 'PM'}`;
-}
 
 function processCategoryBuckets(events: IEvent[]) {
 	return events.reduce((collect, event) => {
@@ -104,10 +96,6 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 		return minutes * date.getHours() + date.getMinutes();
 	}
 
-	computeMinutesDifferenceInDay(date1: Date, date2: Date) {
-		return Math.abs(date1.getTime() - date2.getTime()) / 60000;
-	}
-
 	render() {
 		const categoryBuckets = processCategoryBuckets(this.props.day.events);
 
@@ -179,7 +167,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 										key={`timeline-track-${activityKey}-${eventIndex}`}
 										className="timeline-track-line"
 										style={{
-											background: EventCategoryColor[activityKey] || overflowColor
+											background: EventCategoryColor[activityKey] || Color.Overflow
 										}}
 									>
 										{['left', 'right'].map(lineEnd => (
@@ -194,7 +182,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 													cx="5"
 													cy="5"
 													r="5"
-													fill={EventCategoryColor[activityKey] || overflowColor}
+													fill={EventCategoryColor[activityKey] || Color.Overflow}
 												/>
 											</svg>
 										))}

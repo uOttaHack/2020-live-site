@@ -1,0 +1,22 @@
+.event-item {
+	cursor: pointer;
+	border-top: 1px solid #ddd;
+}
+
+.event-item-content {
+	position: relative;
+	height: 72px;
+	padding: 10px 52px;
+	transition: transform 0.2s;
+}
+
+.event-item-content:hover {
+	transform: translateX(4px);
+	background: rgba(0, 0, 0, 0.02);
+}
+
+.event-item-content > svg {
+	position: absolute;
+	top: 40%;
+	left: 24px;
+}

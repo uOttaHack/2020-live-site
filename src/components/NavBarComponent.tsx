@@ -50,7 +50,9 @@ class NavBarComponent extends React.Component {
 				/>
 				<Navbar id="navbar-main" expanded={this.state.expanded} bg="light" expand="lg">
 					<Navbar.Brand>
-						<Link to={RoutePath.Home}>uOttaHack 3</Link>
+						<Link to={RoutePath.Home} onClick={this.collapse}>
+							uOttaHack 3
+						</Link>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={this.toggle} />
 					<Navbar.Collapse id="basic-navbar-nav">

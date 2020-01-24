@@ -8,7 +8,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 
 import TimelineComponent from '../components/TimelineComponent';
-import EventList from '../components/EventList';
+import EventListComponent from '../components/EventListComponent';
 
 const days: [IEventDay, IEventDay, IEventDay] = [firstDay, secondDay, thirdDay];
 
@@ -26,14 +26,18 @@ const ScheduleView: React.FC = () => {
 			<div className="d-flex flex-column">
 				<ButtonGroup>
 					{days.map((day, index) => (
-						<Button onClick={() => updateDay(day, index)} variant={index === button ? 'dark' : 'light'}>
-							Day {index + 1}
+						<Button
+							key={`btn-group-${index}`}
+							onClick={() => updateDay(day, index)}
+							variant={index === button ? 'dark' : 'light'}
+						>
+							{day.title}
 						</Button>
 					))}
 				</ButtonGroup>
 			</div>
 			<TimelineComponent day={day} />
-			<EventList />
+			<EventListComponent day={day} />
 		</div>
 	);
 };

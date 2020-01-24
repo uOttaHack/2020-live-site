@@ -18,3 +18,7 @@ export interface IEventDay {
 export interface ICategoryEventList {
 	[category: string]: IEvent[];
 }
+
+export interface PropTypesDay {
+	day: IEventDay;
+}

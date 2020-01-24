@@ -1,7 +1,7 @@
 import React from 'react';
 import './TimelineComponent.css';
 
-import { IEvent, ICategoryEventList } from '../interfaces';
+import { PropTypesDay, IEvent, ICategoryEventList } from '../interfaces';
 import { EventCategoryColor } from '../enums';
 import { identity } from '../utils';
 
@@ -31,15 +31,10 @@ function processCategoryBuckets(events: IEvent[]) {
 	}, identity<ICategoryEventList>({}));
 }
 
-interface PropTypes {
-	day: any;
-}
-
-class TimelineComponent extends React.Component<PropTypes> {
+class TimelineComponent extends React.Component<PropTypesDay> {
 	scrollContainerRef: React.RefObject<HTMLDivElement>;
 	interval: NodeJS.Timeout;
 	state: {
-		categoryBuckets: ICategoryEventList;
 		hours: number;
 		minutes: number;
 		width: number;
@@ -50,7 +45,7 @@ class TimelineComponent extends React.Component<PropTypes> {
 		modalBody: string;
 	};
 
-	constructor(props: PropTypes) {
+	constructor(props: PropTypesDay) {
 		super(props);
 		this.scrollContainerRef = React.createRef();
 
@@ -59,7 +54,6 @@ class TimelineComponent extends React.Component<PropTypes> {
 		clearInterval(this.interval);
 
 		this.state = {
-			categoryBuckets: {},
 			hours: new Date().getHours(),
 			minutes: new Date().getMinutes(),
 			width: window.innerWidth,
@@ -115,8 +109,7 @@ class TimelineComponent extends React.Component<PropTypes> {
 	}
 
 	render() {
-		// TODO: fix sketch
-		this.state.categoryBuckets = processCategoryBuckets(this.props.day.events);
+		const categoryBuckets = processCategoryBuckets(this.props.day.events);
 
 		return (
 			<div id="timeline" ref={this.scrollContainerRef}>
@@ -150,9 +143,9 @@ class TimelineComponent extends React.Component<PropTypes> {
 					}}
 				></div>
 				<div id="timeline-tracks-container">
-					{Object.keys(this.state.categoryBuckets).map((activityKey, activityIndex) => (
+					{Object.keys(categoryBuckets).map((activityKey, activityIndex) => (
 						<div key={`timeline-track-${activityKey}-container`}>
-							{this.state.categoryBuckets[activityKey].map((event, eventIndex) => (
+							{categoryBuckets[activityKey].map((event, eventIndex) => (
 								<div
 									key={`timeline-track-${activityKey}-${eventIndex}`}
 									className="timeline-track-item"

@@ -33,8 +33,13 @@ class EventListComponent extends React.Component<PropTypesDay> {
 		this.updateScroll();
 	}
 
-	componentDidUpdate() {
-		this.updateScroll();
+	updateScroll() {
+		window.requestAnimationFrame(() => {
+			if (this.scrollContainerRef.current) {
+				this.scrollContainerRef.current.scrollTop =
+					this.computeFirstActiveEventIndex() * EVENT_LIST_ITEM_HEIGHT;
+			}
+		});
 	}
 
 	handleEventListItemClick(event: IEvent) {
@@ -64,15 +69,6 @@ class EventListComponent extends React.Component<PropTypesDay> {
 			}
 		}
 		return i;
-	}
-
-	updateScroll() {
-		window.requestAnimationFrame(() => {
-			if (this.scrollContainerRef.current) {
-				this.scrollContainerRef.current.scrollTop =
-					this.computeFirstActiveEventIndex() * EVENT_LIST_ITEM_HEIGHT;
-			}
-		});
 	}
 
 	render() {

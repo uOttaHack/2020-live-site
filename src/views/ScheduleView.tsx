@@ -49,7 +49,7 @@ const ScheduleView: React.FC = () => {
 				</ButtonGroup>
 			</div>
 			<TimelineComponent day={day} />
-			<EventListComponent day={day} />
+			<EventListComponent key={day.title} day={day} />
 		</div>
 	);
 };

@@ -3,8 +3,9 @@ import './TimelineComponent.css';
 
 import { PropTypesDay, IEvent, ICategoryEventList } from '../interfaces';
 import { EventCategoryColor } from '../enums';
-import { identity, to12HourTime } from '../utils';
+import { identity, to12HourTime, getRelativeEventTime, dateToMinutesInDay } from '../utils';
 import Color from '../colors';
+import { ONE_MINUTE_MILLISECOND } from '../constants';
 
 import ModalDialog from '../components/ModalDialog';
 
@@ -15,7 +16,6 @@ const labelSpace = 90;
 const trackSpace = 40;
 const trackStartHeight = 60;
 const timeLabels = Array.from(Array(24).keys()).map(i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`);
-const oneMinute = 60000;
 
 function processCategoryBuckets(events: IEvent[]) {
 	return events.reduce((collect, event) => {
@@ -26,12 +26,7 @@ function processCategoryBuckets(events: IEvent[]) {
 
 class TimelineComponent extends React.Component<PropTypesDay> {
 	scrollContainerRef: React.RefObject<HTMLDivElement>;
-	interval: NodeJS.Timeout;
 	state: {
-		hours: number;
-		minutes: number;
-		width: number;
-		height: number;
 		modalShow: boolean;
 		modalHeading: string;
 		modalTime: string;
@@ -42,15 +37,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 		super(props);
 		this.scrollContainerRef = React.createRef();
 
-		// TODO: fix workaround typed initialization
-		this.interval = setInterval(() => ({}), 0);
-		clearInterval(this.interval);
-
 		this.state = {
-			hours: new Date().getHours(),
-			minutes: new Date().getMinutes(),
-			width: window.innerWidth,
-			height: window.innerHeight,
 			modalShow: false,
 			modalHeading: '',
 			modalTime: '',
@@ -59,42 +46,28 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 	}
 
 	componentDidMount() {
-		window.addEventListener('resize', this.updateDimensions);
-
-		this.updateScroll();
-
-		this.interval = setInterval(
-			() =>
-				this.setState({
-					hours: new Date().getHours(),
-					minutes: new Date().getMinutes()
-				}),
-			oneMinute
-		);
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateDimensions);
-
-		clearInterval(this.interval);
-	}
-
-	updateDimensions = () => {
-		this.setState({ width: window.innerWidth, height: window.innerHeight });
-	};
-
-	updateScroll() {
 		if (this.scrollContainerRef.current) {
 			this.scrollContainerRef.current.scrollLeft = this.computeSliderPos() - labelSpace;
 		}
 	}
 
 	computeSliderPos() {
-		return labelSpace * (this.state.hours + this.state.minutes / minutes);
+		const now = new Date();
+		return labelSpace * (now.getHours() + now.getMinutes() / minutes);
 	}
 
-	computeMinutesPassedInDay(date: Date) {
-		return minutes * date.getHours() + date.getMinutes();
+	handleEventListItemClick(event: IEvent) {
+		this.setState({
+			modalShow: true,
+			modalHeading: event.name,
+			modalTime:
+				event.duration === 0
+					? to12HourTime(event.start)
+					: `${to12HourTime(event.start)} - ${to12HourTime(
+							new Date(event.start.getTime() + event.duration * ONE_MINUTE_MILLISECOND)
+					  )}`,
+			modalBody: event.description
+		});
 	}
 
 	render() {
@@ -140,25 +113,13 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 							{categoryBuckets[activityKey].map((event, eventIndex) => (
 								<div
 									key={`timeline-track-${activityKey}-${eventIndex}`}
-									className="timeline-track-item"
+									className={`timeline-track-item ${getRelativeEventTime(event)}`}
 									style={{
 										width: (labelSpace / minutes) * event.duration,
-										left: (labelSpace / minutes) * this.computeMinutesPassedInDay(event.start),
+										left: (labelSpace / minutes) * dateToMinutesInDay(event.start),
 										top: trackStartHeight + trackSpace * activityIndex
 									}}
-									onClick={() =>
-										this.setState({
-											modalShow: true,
-											modalHeading: event.name,
-											modalTime:
-												event.duration === 0
-													? to12HourTime(event.start)
-													: `${to12HourTime(event.start)} - ${to12HourTime(
-															new Date(event.start.getTime() + event.duration * 60000)
-													  )}`,
-											modalBody: event.description
-										})
-									}
+									onClick={() => this.handleEventListItemClick(event)}
 								>
 									<p
 										style={{

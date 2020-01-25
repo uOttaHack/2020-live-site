@@ -9,7 +9,6 @@
 
 .event-item-content {
 	position: relative;
-	height: 72px;
 	padding: 10px 52px;
 	transition: transform 0.2s;
 }
@@ -26,4 +25,13 @@
 
 .event-item-content > p {
 	margin: 0;
+}
+
+.event-item.past {
+	opacity: 0.1;
+	border-top: 1px solid #888;
+}
+
+.event-item.present {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }

@@ -33,3 +33,9 @@ export enum Location {
 	Workshop = 'Git Pull - Workshop Room #307',
 	Staging = 'Staging - First Floor Classroom'
 }
+
+export enum RelativeTime {
+	Past = 'past',
+	Present = 'present',
+	Future = 'future'
+}

@@ -35,6 +35,14 @@
 	cursor: pointer;
 }
 
+.timeline-track-item.past {
+	opacity: 0.1;
+}
+
+.timeline-track-item.present > .timeline-track-line {
+	box-shadow: 0 0 16px pink;
+}
+
 .timeline-track-item:hover {
 	opacity: 0.5;
 }

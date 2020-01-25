@@ -1,6 +1,7 @@
 import React from 'react';
 import './ScheduleView.css';
 
+import { ONE_MINUTE_MILLISECOND } from '../constants';
 import { IEventDay } from '../interfaces';
 import { firstDay, secondDay, thirdDay } from '../data/schedule';
 
@@ -15,6 +16,17 @@ const days: [IEventDay, IEventDay, IEventDay] = [firstDay, secondDay, thirdDay];
 const ScheduleView: React.FC = () => {
 	const [day, setDay] = React.useState(firstDay);
 	const [button, setButton] = React.useState(0);
+	const setDummy = React.useState(-1)[1];
+
+	React.useEffect(() => {
+		const interval = setInterval(() => {
+			setDummy(new Date().getMinutes());
+		}, ONE_MINUTE_MILLISECOND);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
 
 	const updateDay = (day: IEventDay, button: number) => {
 		setDay(day);

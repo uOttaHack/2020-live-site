@@ -22,7 +22,7 @@ export function getRelativeDayTime(date: Date): RelativeTime {
 	if (
 		date.getUTCFullYear() === today.getUTCFullYear() &&
 		date.getMonth() === today.getMonth() &&
-		date.getUTCDate() == today.getUTCDate()
+		date.getUTCDate() === today.getUTCDate()
 	) {
 		return RelativeTime.Present;
 	} else if (date.getTime() < today.getTime()) {

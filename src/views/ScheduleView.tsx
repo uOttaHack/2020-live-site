@@ -13,6 +13,7 @@ import TimelineComponent from '../components/TimelineComponent';
 import EventListComponent from '../components/EventListComponent';
 
 const days: [IEventDay, IEventDay, IEventDay] = [firstDay, secondDay, thirdDay];
+days.forEach(day => day.events.forEach(event => (event.duration = Math.abs(event.duration))));
 
 const ScheduleView: React.FC = () => {
 	const [day, setDay] = React.useState(firstDay);

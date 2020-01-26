@@ -2,6 +2,7 @@ import { IEventDay } from '../interfaces';
 import { EventCategory, Location } from '../enums';
 
 export const firstDay: IEventDay = {
+	index: 0,
 	title: 'Day 1',
 	date: new Date('2020-02-07'),
 	events: [
@@ -57,6 +58,7 @@ export const firstDay: IEventDay = {
 };
 
 export const secondDay: IEventDay = {
+	index: 1,
 	title: 'Day 2',
 	date: new Date('2020-02-08'),
 	events: [
@@ -192,6 +194,7 @@ export const secondDay: IEventDay = {
 };
 
 export const thirdDay: IEventDay = {
+	index: 2,
 	title: 'Day 3',
 	date: new Date('2020-02-09'),
 	events: [

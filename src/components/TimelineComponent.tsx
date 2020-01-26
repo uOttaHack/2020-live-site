@@ -12,7 +12,8 @@ import ModalDialog from '../components/ModalDialog';
 const minutes = 60;
 const timeLabelOffset = 4;
 const timeMarkerOffset = 1;
-const labelSpace = 90;
+const labelSpaceVertical = 6;
+const labelSpaceHorizontal = 90;
 const trackSpace = 40;
 const trackStartHeight = 60;
 const timeLabels = Array.from(Array(24).keys()).map(i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`);
@@ -47,13 +48,13 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 
 	componentDidMount() {
 		if (this.scrollContainerRef.current) {
-			this.scrollContainerRef.current.scrollLeft = this.computeSliderPos() - labelSpace;
+			this.scrollContainerRef.current.scrollLeft = this.computeSliderPos() - labelSpaceHorizontal;
 		}
 	}
 
 	computeSliderPos() {
 		const now = new Date();
-		return labelSpace * (now.getHours() + now.getMinutes() / minutes);
+		return labelSpaceHorizontal * (now.getHours() + now.getMinutes() / minutes);
 	}
 
 	handleEventListItemClick(event: IEvent) {
@@ -88,15 +89,16 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 							<p
 								className="timeline-label"
 								style={{
-									left: index * labelSpace + timeLabelOffset,
-									width: labelSpace
+									top: labelSpaceVertical,
+									left: index * labelSpaceHorizontal + timeLabelOffset,
+									width: labelSpaceHorizontal
 								}}
 							>
 								{label}
 							</p>
 							<div
 								className="timeline-label-marker"
-								style={{ left: index * labelSpace - timeMarkerOffset }}
+								style={{ left: index * labelSpaceHorizontal - timeMarkerOffset }}
 							/>
 						</div>
 					))}
@@ -106,7 +108,14 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 					style={{
 						left: this.computeSliderPos()
 					}}
-				></div>
+				>
+					<svg className="triangle-pointer top" fill="#ff7f7f" viewBox="0 0 100 100">
+						<path d="M0 0 L50 100 L100 0 Z"></path>
+					</svg>
+					<svg className="triangle-pointer bottom" fill="#ff7f7f" viewBox="0 0 100 100">
+						<path d="M0 100 L50 2 L100 100 Z"></path>
+					</svg>
+				</div>
 				<div id="timeline-tracks-container">
 					{Object.keys(categoryBuckets).map((activityKey, activityIndex) => (
 						<div key={`timeline-track-${activityKey}-container`}>
@@ -115,15 +124,15 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 									key={`timeline-track-${activityKey}-${eventIndex}`}
 									className={`timeline-track-item ${getRelativeEventTime(event)}`}
 									style={{
-										width: (labelSpace / minutes) * event.duration,
-										left: (labelSpace / minutes) * dateToMinutesInDay(event.start),
+										width: (labelSpaceHorizontal / minutes) * event.duration,
+										left: (labelSpaceHorizontal / minutes) * dateToMinutesInDay(event.start),
 										top: trackStartHeight + trackSpace * activityIndex
 									}}
 									onClick={() => this.handleEventListItemClick(event)}
 								>
 									<p
 										style={{
-											minWidth: labelSpace
+											minWidth: labelSpaceHorizontal
 										}}
 									>
 										{event.name}

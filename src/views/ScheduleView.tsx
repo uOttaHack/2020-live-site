@@ -17,7 +17,6 @@ days.forEach(day => day.events.forEach(event => (event.duration = Math.abs(event
 
 const ScheduleView: React.FC = () => {
 	const [day, setDay] = React.useState(firstDay);
-	const [button, setButton] = React.useState(0);
 	const setDummy = React.useState(-1)[1];
 
 	React.useEffect(() => {
@@ -30,22 +29,17 @@ const ScheduleView: React.FC = () => {
 		};
 	});
 
-	const updateDay = (day: IEventDay, button: number) => {
-		setDay(day);
-		setButton(button);
-	};
-
 	return (
 		<Container id="schedule" fluid>
 			<div className="d-flex flex-column">
 				<ButtonGroup>
-					{days.map((day, index) => (
+					{days.map((dayInfo, index) => (
 						<Button
 							key={`btn-group-${index}`}
-							onClick={() => updateDay(day, index)}
-							variant={index === button ? 'dark' : 'light'}
+							onClick={() => setDay(dayInfo)}
+							variant={index === day.index ? 'dark' : 'light'}
 						>
-							{day.title}
+							{dayInfo.title}
 						</Button>
 					))}
 				</ButtonGroup>

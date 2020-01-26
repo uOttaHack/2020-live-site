@@ -10,6 +10,7 @@ export interface IEvent {
 }
 
 export interface IEventDay {
+	index: number;
 	title: string;
 	date: Date;
 	events: IEvent[];

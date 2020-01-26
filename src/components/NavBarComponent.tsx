@@ -2,19 +2,12 @@ import React from 'react';
 import './NavBarComponent.css';
 
 import { RoutePath } from '../enums';
+import { ROUTES_WITH_TITLES } from '../constants';
 
 import { Link } from 'react-router-dom';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-
-const routesWithTitles = [
-	[RoutePath.Home, 'Information'],
-	[RoutePath.Schedule, 'Schedule'],
-	[RoutePath.Map, 'Floor Plan'],
-	[RoutePath.Food, 'Food Menu'],
-	[RoutePath.Contact, 'Contact']
-];
 
 class NavBarComponent extends React.Component {
 	state: any;
@@ -58,9 +51,13 @@ class NavBarComponent extends React.Component {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={this.toggle} style={{ color: 'white' }} />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="mr-auto">
-							{routesWithTitles.map((pair, index) => (
-								<Link key={`route-path-link-${index}`} to={pair[0]} onClick={this.collapse}>
-									{pair[1]}
+							{ROUTES_WITH_TITLES.map((routeItem, index) => (
+								<Link
+									key={`route-path-link-${index}`}
+									to={Array.isArray(routeItem.path) ? routeItem.path[0] : routeItem.path}
+									onClick={this.collapse}
+								>
+									{routeItem.title}
 								</Link>
 							))}
 						</Nav>

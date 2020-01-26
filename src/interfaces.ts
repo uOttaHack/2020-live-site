@@ -1,4 +1,4 @@
-import { EventCategory } from './enums';
+import { EventCategory, RoutePath } from './enums';
 
 export interface IEvent {
 	name: string;
@@ -21,4 +21,10 @@ export interface ICategoryEventList {
 
 export interface PropTypesDay {
 	day: IEventDay;
+}
+
+export interface IRouteItem {
+	path: RoutePath | RoutePath[];
+	title: string;
+	component: React.FC<{}>;
 }

@@ -25,9 +25,11 @@ export function getRelativeEventTime(event: IEvent): RelativeTime {
 	const end = start + event.duration;
 	const now = dateToMinutesInDay(new Date());
 
-	if (now < start) {
+	if (start === end && start === now) {
+		return RelativeTime.Present;
+	} else if (now < start) {
 		return RelativeTime.Future;
-	} else if (now > end) {
+	} else if (now >= end) {
 		return RelativeTime.Past;
 	} else {
 		return RelativeTime.Present;

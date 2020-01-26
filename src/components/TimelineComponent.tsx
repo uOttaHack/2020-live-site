@@ -123,7 +123,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 								>
 									<p
 										style={{
-											width: event.duration === 0 ? labelSpace : '100%'
+											minWidth: labelSpace
 										}}
 									>
 										{event.name}

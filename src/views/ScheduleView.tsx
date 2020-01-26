@@ -5,6 +5,7 @@ import { ONE_MINUTE_MILLISECOND } from '../constants';
 import { IEventDay } from '../interfaces';
 import { firstDay, secondDay, thirdDay } from '../data/schedule';
 
+import Container from 'react-bootstrap/Container';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 
@@ -34,7 +35,7 @@ const ScheduleView: React.FC = () => {
 	};
 
 	return (
-		<div id="schedule">
+		<Container id="schedule" fluid>
 			<div className="d-flex flex-column">
 				<ButtonGroup>
 					{days.map((day, index) => (
@@ -50,7 +51,7 @@ const ScheduleView: React.FC = () => {
 			</div>
 			<TimelineComponent day={day} />
 			<EventListComponent key={day.title} day={day} />
-		</div>
+		</Container>
 	);
 };
 

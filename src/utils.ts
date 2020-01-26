@@ -16,8 +16,20 @@ export function dateToMinutesInDay(date: Date) {
 	return date.getHours() * 60 + date.getMinutes();
 }
 
-export function getRelativeDayTime(date: Date) {
-	// TODO: to check if the given date is past, present (today), or future
+export function getRelativeDayTime(date: Date): RelativeTime {
+	const today = new Date();
+
+	if (
+		date.getUTCFullYear() === today.getUTCFullYear() &&
+		date.getMonth() === today.getMonth() &&
+		date.getUTCDate() == today.getUTCDate()
+	) {
+		return RelativeTime.Present;
+	} else if (date.getTime() < today.getTime()) {
+		return RelativeTime.Past;
+	} else {
+		return RelativeTime.Future;
+	}
 }
 
 export function getRelativeEventTime(event: IEvent): RelativeTime {

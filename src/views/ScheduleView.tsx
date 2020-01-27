@@ -26,11 +26,11 @@ const ScheduleView: React.FC = () => {
 	}
 
 	const [day, setDay] = React.useState(initialDay);
-	const setDummy = React.useState(-1)[1];
+	const [,setDummy] = React.useState();
 
 	React.useEffect(() => {
 		const interval = setInterval(() => {
-			setDummy(new Date().getMinutes());
+			setDummy({});
 		}, ONE_MINUTE_MILLISECOND);
 
 		return () => {

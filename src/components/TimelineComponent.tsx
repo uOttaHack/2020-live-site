@@ -103,20 +103,21 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 						</div>
 					))}
 				</div>
-				<div
-					id="timeline-slider"
-					style={{
-						left: this.computeSliderPos(),
-						display: this.props.showAsToday ? 'block' : 'none'
-					}}
-				>
-					<svg className="triangle-pointer top" fill="#ff7f7f" viewBox="0 0 100 100">
-						<path d="M0 0 L50 100 L100 0 Z"></path>
-					</svg>
-					<svg className="triangle-pointer bottom" fill="#ff7f7f" viewBox="0 0 100 100">
-						<path d="M0 100 L50 2 L100 100 Z"></path>
-					</svg>
-				</div>
+				{this.props.showAsToday && (
+					<div
+						id="timeline-slider"
+						style={{
+							left: this.computeSliderPos()
+						}}
+					>
+						<svg className="triangle-pointer top" fill="#ff7f7f" viewBox="0 0 100 100">
+							<path d="M0 0 L50 100 L100 0 Z"></path>
+						</svg>
+						<svg className="triangle-pointer bottom" fill="#ff7f7f" viewBox="0 0 100 100">
+							<path d="M0 100 L50 2 L100 100 Z"></path>
+						</svg>
+					</div>
+				)}
 				<div id="timeline-tracks-container">
 					{Object.keys(categoryBuckets).map((activityKey, activityIndex) => (
 						<div key={`timeline-track-${activityKey}-container`}>

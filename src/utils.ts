@@ -20,9 +20,9 @@ export function getRelativeDayTime(date: Date): RelativeTime {
 	const today = new Date();
 
 	if (
-		date.getUTCFullYear() === today.getUTCFullYear() &&
+		date.getFullYear() === today.getFullYear() &&
 		date.getMonth() === today.getMonth() &&
-		date.getUTCDate() === today.getUTCDate()
+		date.getDate() === today.getDate()
 	) {
 		return RelativeTime.Present;
 	} else if (date.getTime() < today.getTime()) {

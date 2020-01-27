@@ -1,4 +1,4 @@
-import { EventCategory, RoutePath } from './enums';
+import { EventCategory, RoutePath, RelativeTime } from './enums';
 
 export interface IEvent {
 	name: string;
@@ -22,6 +22,8 @@ export interface ICategoryEventList {
 
 export interface PropTypesDay {
 	day: IEventDay;
+	showAsToday: boolean;
+	relativeDayTime: RelativeTime;
 }
 
 export interface IRouteItem {

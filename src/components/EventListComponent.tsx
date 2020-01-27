@@ -30,7 +30,9 @@ class EventListComponent extends React.Component<PropTypesDay> {
 	}
 
 	componentDidMount() {
-		this.updateScroll();
+		if (this.props.showAsToday) {
+			this.updateScroll();
+		}
 	}
 
 	updateScroll() {
@@ -83,7 +85,11 @@ class EventListComponent extends React.Component<PropTypesDay> {
 				/>
 				{this.props.day.events.map((event, index) => (
 					<div key={`event-list-item-${index}`} onClick={() => this.handleEventListItemClick(event)}>
-						<EventListItem event={event} />
+						<EventListItem
+							event={event}
+							showAsToday={this.props.showAsToday}
+							relativeDayTime={this.props.relativeDayTime}
+						/>
 					</div>
 				))}
 			</div>

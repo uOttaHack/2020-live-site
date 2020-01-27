@@ -47,7 +47,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 	}
 
 	componentDidMount() {
-		if (this.scrollContainerRef.current) {
+		if (this.scrollContainerRef.current && this.props.showAsToday) {
 			this.scrollContainerRef.current.scrollLeft = this.computeSliderPos() - labelSpaceHorizontal;
 		}
 	}
@@ -106,7 +106,8 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 				<div
 					id="timeline-slider"
 					style={{
-						left: this.computeSliderPos()
+						left: this.computeSliderPos(),
+						display: this.props.showAsToday ? 'block' : 'none'
 					}}
 				>
 					<svg className="triangle-pointer top" fill="#ff7f7f" viewBox="0 0 100 100">
@@ -122,7 +123,11 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 							{categoryBuckets[activityKey].map((event, eventIndex) => (
 								<div
 									key={`timeline-track-${activityKey}-${eventIndex}`}
-									className={`timeline-track-item ${getRelativeEventTime(event)}`}
+									className={`timeline-track-item ${
+										this.props.showAsToday
+											? getRelativeEventTime(event)
+											: this.props.relativeDayTime
+									}`}
 									style={{
 										width: (labelSpaceHorizontal / minutes) * event.duration,
 										left: (labelSpaceHorizontal / minutes) * dateToMinutesInDay(event.start),

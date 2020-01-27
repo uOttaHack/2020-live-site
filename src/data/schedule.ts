@@ -4,11 +4,11 @@ import { EventCategory, Location } from '../enums';
 export const firstDay: IEventDay = {
 	index: 0,
 	title: 'Day 1',
-	date: new Date('2020-02-07'),
+	date: new Date('2020-02-07T00:00:00-05:00'),
 	events: [
 		{
 			name: 'Registration Opens',
-			start: new Date('2020-02-07T17:00'),
+			start: new Date('2020-02-07T17:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Default,
 			location: '',
@@ -16,7 +16,7 @@ export const firstDay: IEventDay = {
 		},
 		{
 			name: 'Dinner',
-			start: new Date('2020-02-07T18:00'),
+			start: new Date('2020-02-07T18:00:00-05:00'),
 			duration: 60,
 			category: EventCategory.Food,
 			location: '',
@@ -24,7 +24,7 @@ export const firstDay: IEventDay = {
 		},
 		{
 			name: 'Opening Ceremony',
-			start: new Date('2020-02-07T20:00'),
+			start: new Date('2020-02-07T20:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Default,
 			location: '',
@@ -32,7 +32,7 @@ export const firstDay: IEventDay = {
 		},
 		{
 			name: 'Career Fair',
-			start: new Date('2020-02-07T21:30'),
+			start: new Date('2020-02-07T21:30:00-05:00'),
 			duration: 120,
 			category: EventCategory.Career,
 			location: Location.CareerFair,
@@ -40,7 +40,7 @@ export const firstDay: IEventDay = {
 		},
 		{
 			name: 'Team Formation',
-			start: new Date('2020-02-07T22:30'),
+			start: new Date('2020-02-07T22:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Activity,
 			location: '',
@@ -48,7 +48,7 @@ export const firstDay: IEventDay = {
 		},
 		{
 			name: 'Hacking Begins',
-			start: new Date('2020-02-07T23:00'),
+			start: new Date('2020-02-07T23:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Hacker,
 			location: '',
@@ -60,11 +60,11 @@ export const firstDay: IEventDay = {
 export const secondDay: IEventDay = {
 	index: 1,
 	title: 'Day 2',
-	date: new Date('2020-02-08'),
+	date: new Date('2020-02-08T00:00:00-05:00'),
 	events: [
 		{
 			name: 'Midnight Snack',
-			start: new Date('2020-02-08T00:00'),
+			start: new Date('2020-02-08T00:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Food,
 			location: '',
@@ -72,7 +72,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Workshop - Student Ran',
-			start: new Date('2020-02-08T01:00'),
+			start: new Date('2020-02-08T01:00:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop,
 			location: Location.Workshop,
@@ -80,7 +80,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Breakfast',
-			start: new Date('2020-02-08T07:00'),
+			start: new Date('2020-02-08T07:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Food,
 			location: '',
@@ -88,7 +88,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Pet Therapy',
-			start: new Date('2020-02-08T09:30'),
+			start: new Date('2020-02-08T09:30:00-05:00'),
 			duration: 120,
 			category: EventCategory.Activity,
 			location: '.gitignore',
@@ -96,7 +96,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Deloitte Workshop',
-			start: new Date('2020-02-08T10:30'),
+			start: new Date('2020-02-08T10:30:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop,
 			location: Location.Workshop,
@@ -104,7 +104,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Career Fair',
-			start: new Date('2020-02-08T11:30'),
+			start: new Date('2020-02-08T11:30:00-05:00'),
 			duration: 300,
 			category: EventCategory.Career,
 			location: Location.CareerFair,
@@ -112,7 +112,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Lunch',
-			start: new Date('2020-02-08T12:00'),
+			start: new Date('2020-02-08T12:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Food,
 			location: '',
@@ -120,7 +120,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Startup Panel',
-			start: new Date('2020-02-08T13:00'),
+			start: new Date('2020-02-08T13:00:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop,
 			location: Location.Staging,
@@ -128,7 +128,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Innovapost Workshop',
-			start: new Date('2020-02-08T14:00'),
+			start: new Date('2020-02-08T14:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Workshop,
 			location: Location.Workshop,
@@ -136,7 +136,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Skating',
-			start: new Date('2020-02-08T15:30'),
+			start: new Date('2020-02-08T15:30:00-05:00'),
 			duration: 120,
 			category: EventCategory.Activity,
 			location: '',
@@ -144,7 +144,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Workshop',
-			start: new Date('2020-02-08T17:00'),
+			start: new Date('2020-02-08T17:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Workshop,
 			location: Location.Workshop,
@@ -152,7 +152,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Dinner',
-			start: new Date('2020-02-08T18:00'),
+			start: new Date('2020-02-08T18:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Food,
 			location: '',
@@ -160,7 +160,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Diversity Talk',
-			start: new Date('2020-02-08T19:30'),
+			start: new Date('2020-02-08T19:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Activity,
 			location: '',
@@ -168,7 +168,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Workshop',
-			start: new Date('2020-02-08T20:30'),
+			start: new Date('2020-02-08T20:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop,
 			location: Location.Workshop,
@@ -176,7 +176,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'MLH Mini Event',
-			start: new Date('2020-02-08T22:00'),
+			start: new Date('2020-02-08T22:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Activity,
 			location: '',
@@ -184,7 +184,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Karaoke',
-			start: new Date('2020-02-08T23:00'),
+			start: new Date('2020-02-08T23:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Activity,
 			location: Location.Workshop,
@@ -196,11 +196,11 @@ export const secondDay: IEventDay = {
 export const thirdDay: IEventDay = {
 	index: 2,
 	title: 'Day 3',
-	date: new Date('2020-02-09'),
+	date: new Date('2020-02-09T00:00:00-05:00'),
 	events: [
 		{
 			name: 'Midnight Snack',
-			start: new Date('2020-02-09T00:00'),
+			start: new Date('2020-02-09T00:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Food,
 			location: '',
@@ -208,7 +208,7 @@ export const thirdDay: IEventDay = {
 		},
 		{
 			name: 'Workshop',
-			start: new Date('2020-02-09T01:00'),
+			start: new Date('2020-02-09T01:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Workshop,
 			location: '',
@@ -216,7 +216,7 @@ export const thirdDay: IEventDay = {
 		},
 		{
 			name: 'Breakfast',
-			start: new Date('2020-02-09T07:00'),
+			start: new Date('2020-02-09T07:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Food,
 			location: '',
@@ -224,7 +224,7 @@ export const thirdDay: IEventDay = {
 		},
 		{
 			name: 'Career Fair',
-			start: new Date('2020-02-09T09:00'),
+			start: new Date('2020-02-09T09:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Career,
 			location: Location.CareerFair,
@@ -232,7 +232,7 @@ export const thirdDay: IEventDay = {
 		},
 		{
 			name: 'Hacking Ends',
-			start: new Date('2020-02-09T10:00'),
+			start: new Date('2020-02-09T10:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Hacker,
 			location: '',
@@ -240,7 +240,7 @@ export const thirdDay: IEventDay = {
 		},
 		{
 			name: 'Lunch',
-			start: new Date('2020-02-09T12:00'),
+			start: new Date('2020-02-09T12:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Food,
 			location: '',
@@ -248,7 +248,7 @@ export const thirdDay: IEventDay = {
 		},
 		{
 			name: 'Closing Ceremonies',
-			start: new Date('2020-02-09T13:30'),
+			start: new Date('2020-02-09T13:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Career,
 			location: '',
@@ -256,7 +256,7 @@ export const thirdDay: IEventDay = {
 		},
 		{
 			name: 'Buses Leave',
-			start: new Date('2020-02-09T15:30'),
+			start: new Date('2020-02-09T15:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Default,
 			location: '',
@@ -264,3 +264,5 @@ export const thirdDay: IEventDay = {
 		}
 	]
 };
+
+export const dayAfterLastDay = new Date('2020-02-10T00:00:00-05:00');

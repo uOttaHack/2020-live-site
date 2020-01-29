@@ -1,5 +1,6 @@
 enum Color {
-	Overflow = 'deepskyblue'
+	Overflow = 'deepskyblue',
+	LiveActivity = '#e32323'
 }
 
 export default Color;

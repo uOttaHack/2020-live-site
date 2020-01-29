@@ -3,7 +3,8 @@ import { EventCategory, Location } from '../enums';
 
 export const firstDay: IEventDay = {
 	index: 0,
-	title: 'Day 1',
+	title: 'Fri',
+	longTitle: 'Friday February 7',
 	date: new Date('2020-02-07T00:00:00-05:00'),
 	events: [
 		{
@@ -59,7 +60,8 @@ export const firstDay: IEventDay = {
 
 export const secondDay: IEventDay = {
 	index: 1,
-	title: 'Day 2',
+	title: 'Sat',
+	longTitle: 'Saturday February 8',
 	date: new Date('2020-02-08T00:00:00-05:00'),
 	events: [
 		{
@@ -195,7 +197,8 @@ export const secondDay: IEventDay = {
 
 export const thirdDay: IEventDay = {
 	index: 2,
-	title: 'Day 3',
+	title: 'Sun',
+	longTitle: 'Sunday February 9',
 	date: new Date('2020-02-09T00:00:00-05:00'),
 	events: [
 		{

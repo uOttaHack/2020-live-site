@@ -1,8 +1,8 @@
 import React from 'react';
 import './ScheduleView.css';
 
-import { ONE_MINUTE_MILLISECOND, SHOW_AS_LIVE_DATES } from '../constants';
-import { RelativeTime } from '../enums';
+import { ONE_MINUTE_MILLISECOND, SHOW_AS_LIVE_DATES, MOBILE_BREAKPOINT_WIDTH } from '../constants';
+import { EventListener, RelativeTime } from '../enums';
 import { IEventDay } from '../interfaces';
 import { firstDay, secondDay, thirdDay, dayAfterLastDay } from '../data/schedule';
 import { getRelativeDayTime } from '../utils';
@@ -25,15 +25,26 @@ const ScheduleView: React.FC = () => {
 		initialDay = thirdDay;
 	}
 
+	const [mobile, setMobile] = React.useState(true);
 	const [day, setDay] = React.useState(initialDay);
-	const [,setDummy] = React.useState();
+	const [, setDummy] = React.useState();
+
+	const updateDimensions = () => {
+		const isMobile = window.innerWidth < MOBILE_BREAKPOINT_WIDTH;
+		if (mobile !== isMobile) {
+			setMobile(isMobile);
+		}
+	};
 
 	React.useEffect(() => {
+		updateDimensions();
+		window.addEventListener(EventListener.Resize, updateDimensions);
 		const interval = setInterval(() => {
 			setDummy({});
 		}, ONE_MINUTE_MILLISECOND);
 
 		return () => {
+			window.removeEventListener(EventListener.Resize, updateDimensions);
 			clearInterval(interval);
 		};
 	});
@@ -52,7 +63,7 @@ const ScheduleView: React.FC = () => {
 							onClick={() => setDay(dayInfo)}
 							variant={index === day.index ? 'dark' : 'light'}
 						>
-							{dayInfo.title}
+							{(!mobile && dayInfo.longTitle) || dayInfo.title}
 						</Button>
 					))}
 				</ButtonGroup>

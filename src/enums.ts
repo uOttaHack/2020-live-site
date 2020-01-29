@@ -39,3 +39,7 @@ export enum RelativeTime {
 	Present = 'present',
 	Future = 'future'
 }
+
+export enum EventListener {
+	Resize = 'resize'
+}

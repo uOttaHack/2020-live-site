@@ -9,4 +9,5 @@
 #map-view .floor-layouts img {
 	width: 100%;
 	margin: 24px 0px;
+	user-select: none;
 }

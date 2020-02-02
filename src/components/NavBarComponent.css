@@ -4,6 +4,7 @@
 
 #navbar-main {
 	z-index: 1000;
+	user-select: none;
 }
 
 #navbar-hidden-overlay {

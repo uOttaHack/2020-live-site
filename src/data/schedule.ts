@@ -12,23 +12,23 @@ export const firstDay: IEventDay = {
 			start: new Date('2020-02-07T17:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Default,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
 			name: 'Dinner',
 			start: new Date('2020-02-07T18:00:00-05:00'),
-			duration: 60,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
 			name: 'Opening Ceremony',
 			start: new Date('2020-02-07T20:00:00-05:00'),
-			duration: 90,
+			duration: 60,
 			category: EventCategory.Default,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -44,7 +44,7 @@ export const firstDay: IEventDay = {
 			start: new Date('2020-02-07T22:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Activity,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -52,8 +52,16 @@ export const firstDay: IEventDay = {
 			start: new Date('2020-02-07T23:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Hacker,
-			location: '',
+			location: Location.None,
 			description: ''
+		},
+		{
+			name: 'Intro to Git',
+			start: new Date('2020-02-07T23:30:00-05:00'),
+			duration: 30,
+			category: EventCategory.Workshop,
+			location: Location.WorkshopC409,
+			description: 'By Brennan McDonald'
 		}
 	]
 };
@@ -67,25 +75,49 @@ export const secondDay: IEventDay = {
 		{
 			name: 'Midnight Snack',
 			start: new Date('2020-02-08T00:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
-			description: ''
+			location: Location.None,
+			description: 'Sponsored by RBR'
 		},
 		{
-			name: 'Workshop - Student Ran',
-			start: new Date('2020-02-08T01:00:00-05:00'),
+			name: 'Intro to Machine Learning Workshop',
+			start: new Date('2020-02-08T00:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop,
-			location: Location.Workshop,
-			description: ''
+			location: Location.WorkshopC409,
+			description: 'By Chris Wang'
+		},
+		{
+			name: 'Intro to React Workshop',
+			start: new Date('2020-02-08T01:30:00-05:00'),
+			duration: 60,
+			category: EventCategory.Workshop,
+			location: Location.WorkshopC409,
+			description: 'By Daniel Wu'
 		},
 		{
 			name: 'Breakfast',
 			start: new Date('2020-02-08T07:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
+			location: Location.None,
+			description: ''
+		},
+		{
+			name: 'Solace Workshop',
+			start: new Date('2020-02-08T08:00:00-05:00'),
+			duration: 60,
+			category: EventCategory.Workshop,
+			location: Location.WorkshopC408,
+			description: ''
+		},
+		{
+			name: 'DRDC Workshop',
+			start: new Date('2020-02-08T09:00:00-05:00'),
+			duration: 30,
+			category: EventCategory.Workshop,
+			location: Location.WorkshopC409,
 			description: ''
 		},
 		{
@@ -93,7 +125,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T09:30:00-05:00'),
 			duration: 120,
 			category: EventCategory.Activity,
-			location: '.gitignore',
+			location: Location.Lobby,
 			description: ''
 		},
 		{
@@ -101,7 +133,15 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T10:30:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop,
-			location: Location.Workshop,
+			location: Location.WorkshopC409,
+			description: ''
+		},
+		{
+			name: 'SurveyMonkey Workshop',
+			start: new Date('2020-02-08T11:00:00-05:00'),
+			duration: 30,
+			category: EventCategory.Workshop,
+			location: Location.WorkshopC408,
 			description: ''
 		},
 		{
@@ -115,17 +155,17 @@ export const secondDay: IEventDay = {
 		{
 			name: 'Lunch',
 			start: new Date('2020-02-08T12:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
 			name: 'Startup Panel',
 			start: new Date('2020-02-08T13:00:00-05:00'),
 			duration: 60,
-			category: EventCategory.Workshop,
-			location: Location.Staging,
+			category: EventCategory.Activity,
+			location: Location.Chill,
 			description: ''
 		},
 		{
@@ -133,7 +173,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T14:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Workshop,
-			location: Location.Workshop,
+			location: Location.WorkshopC409,
 			description: ''
 		},
 		{
@@ -141,23 +181,23 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T15:30:00-05:00'),
 			duration: 120,
 			category: EventCategory.Activity,
-			location: '',
-			description: ''
+			location: Location.Lobby,
+			description: 'Meet at the lobby before heading to the canal.'
 		},
 		{
 			name: 'Workshop',
 			start: new Date('2020-02-08T17:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Workshop,
-			location: Location.Workshop,
+			location: Location.WorkshopC409,
 			description: ''
 		},
 		{
 			name: 'Dinner',
 			start: new Date('2020-02-08T18:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -165,7 +205,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T19:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Activity,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -173,15 +213,15 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T20:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop,
-			location: Location.Workshop,
+			location: Location.WorkshopC409,
 			description: ''
 		},
 		{
 			name: 'MLH Mini Event',
-			start: new Date('2020-02-08T22:00:00-05:00'),
+			start: new Date('2020-02-08T21:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Activity,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -189,7 +229,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T23:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Activity,
-			location: Location.Workshop,
+			location: Location.Lobby,
 			description: ''
 		}
 	]
@@ -204,9 +244,9 @@ export const thirdDay: IEventDay = {
 		{
 			name: 'Midnight Snack',
 			start: new Date('2020-02-09T00:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -214,15 +254,15 @@ export const thirdDay: IEventDay = {
 			start: new Date('2020-02-09T01:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Workshop,
-			location: '',
+			location: Location.WorkshopC409,
 			description: ''
 		},
 		{
 			name: 'Breakfast',
 			start: new Date('2020-02-09T07:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -238,23 +278,31 @@ export const thirdDay: IEventDay = {
 			start: new Date('2020-02-09T10:00:00-05:00'),
 			duration: 0,
 			category: EventCategory.Hacker,
-			location: '',
+			location: Location.None,
+			description: ''
+		},
+		{
+			name: 'Demos Start',
+			start: new Date('2020-02-09T10:30:00-05:00'),
+			duration: 0,
+			category: EventCategory.Hacker,
+			location: Location.None,
 			description: ''
 		},
 		{
 			name: 'Lunch',
 			start: new Date('2020-02-09T12:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Food,
-			location: '',
+			location: Location.None,
 			description: ''
 		},
 		{
 			name: 'Closing Ceremonies',
 			start: new Date('2020-02-09T13:30:00-05:00'),
 			duration: 0,
-			category: EventCategory.Career,
-			location: '',
+			category: EventCategory.Default,
+			location: Location.None,
 			description: ''
 		},
 		{
@@ -262,7 +310,7 @@ export const thirdDay: IEventDay = {
 			start: new Date('2020-02-09T15:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Default,
-			location: '',
+			location: Location.None,
 			description: ''
 		}
 	]

@@ -29,9 +29,13 @@ export enum RoutePath {
 }
 
 export enum Location {
+	None = '',
 	CareerFair = 'South floor 0',
-	Workshop = 'Git Pull - Workshop Room #307',
-	Staging = 'Staging - First Floor Classroom'
+	WorkshopC408 = 'Workshop Room C408',
+	WorkshopC409 = 'Workshop Room C409',
+	Staging = 'Staging - First Floor Classroom',
+	Lobby = 'Lobby',
+	Chill = 'REST Room - 5th floor'
 }
 
 export enum RelativeTime {

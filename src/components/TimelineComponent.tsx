@@ -2,7 +2,7 @@ import React from 'react';
 import './TimelineComponent.css';
 
 import { PropTypesDay, IEvent, ICategoryEventList } from '../interfaces';
-import { EventCategoryColor } from '../enums';
+import { EventCategoryColor, EventCategory } from '../enums';
 import { identity, to12HourTime, getRelativeEventTime, dateToMinutesInDay } from '../utils';
 import Color from '../colors';
 import { ONE_MINUTE_MILLISECOND } from '../constants';
@@ -15,7 +15,7 @@ const timeMarkerOffset = 1;
 const labelSpaceVertical = 6;
 const labelSpaceHorizontal = 90;
 const trackSpace = 40;
-const trackStartHeight = 60;
+const trackStartHeight = 36;
 const timeLabels = Array.from(Array(24).keys()).map(i => `${i % 12 === 0 ? 12 : i % 12}${i % 24 < 12 ? 'AM' : 'PM'}`);
 
 function processCategoryBuckets(events: IEvent[]) {
@@ -29,9 +29,8 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 	scrollContainerRef: React.RefObject<HTMLDivElement>;
 	state: {
 		modalShow: boolean;
-		modalHeading: string;
-		modalTime: string;
-		modalBody: string;
+		modalFormattedTime: string;
+		selectedEvent: IEvent;
 	};
 
 	constructor(props: PropTypesDay) {
@@ -40,9 +39,15 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 
 		this.state = {
 			modalShow: false,
-			modalHeading: '',
-			modalTime: '',
-			modalBody: ''
+			modalFormattedTime: '',
+			selectedEvent: {
+				name: '',
+				start: new Date(),
+				duration: 0,
+				category: EventCategory.Default,
+				location: '',
+				description: ''
+			}
 		};
 	}
 
@@ -60,14 +65,13 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 	handleEventListItemClick(event: IEvent) {
 		this.setState({
 			modalShow: true,
-			modalHeading: event.name,
-			modalTime:
+			modalFormattedTime:
 				event.duration === 0
 					? to12HourTime(event.start)
 					: `${to12HourTime(event.start)} - ${to12HourTime(
 							new Date(event.start.getTime() + event.duration * ONE_MINUTE_MILLISECOND)
 					  )}`,
-			modalBody: event.description
+			selectedEvent: event
 		});
 	}
 
@@ -79,9 +83,8 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 				<ModalDialog
 					show={this.state.modalShow}
 					onHide={() => this.setState({ modalShow: false })}
-					heading={this.state.modalHeading}
-					time={this.state.modalTime}
-					body={this.state.modalBody}
+					formattedTime={this.state.modalFormattedTime}
+					event={this.state.selectedEvent}
 				/>
 				<div id="timeline-label-container">
 					{timeLabels.map((label, index) => (
@@ -138,7 +141,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 								>
 									<p
 										style={{
-											minWidth: labelSpaceHorizontal
+											width: event.duration === 0 ? labelSpaceHorizontal : '100%'
 										}}
 									>
 										{event.name}

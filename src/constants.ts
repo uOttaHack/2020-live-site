@@ -38,11 +38,15 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		component: ContactView
 	}
 ];
+const CLOCK_EMOJI_HOUR_LIST = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚'];
+const CLOCK_EMOJI_THIRTY_LIST = ['🕧', '🕜', '🕝', '🕞', '🕟', '🕠', '🕡', '🕢', '🕣', '🕤', '🕥', '🕦'];
 
 export {
 	SHOW_AS_LIVE_DATES,
 	MOBILE_BREAKPOINT_WIDTH,
 	ONE_MINUTE_MILLISECOND,
 	EVENT_LIST_ITEM_HEIGHT,
-	ROUTES_WITH_TITLES
+	ROUTES_WITH_TITLES,
+	CLOCK_EMOJI_HOUR_LIST,
+	CLOCK_EMOJI_THIRTY_LIST
 };

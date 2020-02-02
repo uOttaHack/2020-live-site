@@ -38,7 +38,15 @@ const ModalDialog: React.FC<PropTypes> = props => {
 						<span>{props.event.location}</span>
 					</p>
 				)}
-				{props.event.description && <p>{props.event.description}</p>}
+				{props.event.description && (
+					<p>
+						<span role="img" aria-label="memo emoji">
+							📝
+						</span>
+						&nbsp;
+						{props.event.description}
+					</p>
+				)}
 			</Modal.Body>
 		</Modal>
 	);

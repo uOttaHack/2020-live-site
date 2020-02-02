@@ -35,7 +35,11 @@ export enum Location {
 	WorkshopC409 = 'Workshop Room C409',
 	Staging = 'Staging - First Floor Classroom',
 	Lobby = 'Lobby',
-	Chill = 'REST Room - 5th floor'
+	Chill = 'REST Room - 5th floor',
+	UCU = 'UCU - follow guides to different building',
+	Food = 'Food Room C308',
+	Demo = 'C140',
+	Canal = 'Rideau Canal'
 }
 
 export enum RelativeTime {

@@ -20,15 +20,15 @@ export const firstDay: IEventDay = {
 			start: new Date('2020-02-07T18:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: ''
+			location: Location.Food,
+			description: 'Shawarma Express'
 		},
 		{
 			name: 'Opening Ceremony',
 			start: new Date('2020-02-07T20:00:00-05:00'),
 			duration: 60,
 			category: EventCategory.Default,
-			location: Location.None,
+			location: Location.UCU,
 			description: ''
 		},
 		{
@@ -77,8 +77,8 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T00:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: 'Sponsored by RBR'
+			location: Location.Food,
+			description: 'Ice cream and cookies sponsored by RBR'
 		},
 		{
 			name: 'Intro to Machine Learning Workshop',
@@ -101,8 +101,8 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T07:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: ''
+			location: Location.Food,
+			description: 'Bagels, fruits, and pastries'
 		},
 		{
 			name: 'Solace Workshop',
@@ -126,7 +126,7 @@ export const secondDay: IEventDay = {
 			duration: 120,
 			category: EventCategory.Activity,
 			location: Location.Lobby,
-			description: ''
+			description: 'Please bring donations.'
 		},
 		{
 			name: 'Deloitte Workshop',
@@ -157,8 +157,8 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T12:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: ''
+			location: Location.Food,
+			description: 'Raon Kitchen'
 		},
 		{
 			name: 'Startup Panel',
@@ -181,7 +181,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T15:30:00-05:00'),
 			duration: 120,
 			category: EventCategory.Activity,
-			location: Location.Lobby,
+			location: Location.Canal,
 			description: 'Meet at the lobby before heading to the canal.'
 		},
 		{
@@ -197,15 +197,15 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T18:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: ''
+			location: Location.Food,
+			description: 'Chillies'
 		},
 		{
 			name: 'Diversity Talk',
 			start: new Date('2020-02-08T19:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Activity,
-			location: Location.None,
+			location: Location.WorkshopC408,
 			description: ''
 		},
 		{
@@ -246,8 +246,8 @@ export const thirdDay: IEventDay = {
 			start: new Date('2020-02-09T00:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: ''
+			location: Location.Food,
+			description: 'Bubble tea'
 		},
 		{
 			name: 'Workshop',
@@ -262,8 +262,8 @@ export const thirdDay: IEventDay = {
 			start: new Date('2020-02-09T07:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: ''
+			location: Location.Food,
+			description: 'Bagels, fruits, and pastries'
 		},
 		{
 			name: 'Career Fair',
@@ -285,8 +285,8 @@ export const thirdDay: IEventDay = {
 			name: 'Demos Start',
 			start: new Date('2020-02-09T10:30:00-05:00'),
 			duration: 0,
-			category: EventCategory.Hacker,
-			location: Location.None,
+			category: EventCategory.Default,
+			location: Location.Demo,
 			description: ''
 		},
 		{
@@ -294,15 +294,15 @@ export const thirdDay: IEventDay = {
 			start: new Date('2020-02-09T12:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
-			location: Location.None,
-			description: ''
+			location: Location.Food,
+			description: 'La Bottega'
 		},
 		{
 			name: 'Closing Ceremonies',
 			start: new Date('2020-02-09T13:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Default,
-			location: Location.None,
+			location: Location.UCU,
 			description: ''
 		},
 		{

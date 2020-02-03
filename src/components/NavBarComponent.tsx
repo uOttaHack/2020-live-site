@@ -43,7 +43,7 @@ class NavBarComponent extends React.Component {
 				/>
 				<Navbar id="navbar-main" expanded={this.state.expanded} bg="dark" variant="dark" expand="lg">
 					<Navbar.Brand id="brand">
-						<img src="./logo512.png" alt="uOttaHack 3 Logo" />
+						<img src="./logo512.png" alt="" />
 						<Link id="wordmark" to={RoutePath.Home} onClick={this.collapse}>
 							uOttaHack<span>3</span>
 						</Link>

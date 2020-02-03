@@ -84,7 +84,7 @@ class EventListComponent extends React.Component<PropTypesDay> {
 			const start = dateToMinutesInDay(event.start);
 			const end = start + event.duration;
 
-			if (now <= end) {
+			if (now < end) {
 				break;
 			}
 		}

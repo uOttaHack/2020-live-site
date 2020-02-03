@@ -49,7 +49,7 @@ const ScheduleView: React.FC = () => {
 		};
 	});
 
-	const hasPassed = Date.now() >= dayAfterLastDay.getTime();
+	const hasPassed = new Date().getTime() >= dayAfterLastDay.getTime();
 	const relativeDayTime = hasPassed ? RelativeTime.Future : getRelativeDayTime(day.date);
 	const showAsToday = (relativeDayTime === RelativeTime.Present || !SHOW_AS_LIVE_DATES) && !hasPassed;
 

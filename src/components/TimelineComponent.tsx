@@ -52,8 +52,13 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 	}
 
 	componentDidMount() {
-		if (this.scrollContainerRef.current && this.props.showAsToday) {
-			this.scrollContainerRef.current.scrollLeft = this.computeSliderPos() - labelSpaceHorizontal;
+		if (this.scrollContainerRef.current) {
+			if (this.props.showAsToday) {
+				this.scrollContainerRef.current.scrollLeft = this.computeSliderPos() - labelSpaceHorizontal;
+			} else {
+				this.scrollContainerRef.current.scrollLeft =
+					labelSpaceHorizontal * this.props.day.events[0].start.getHours();
+			}
 		}
 	}
 

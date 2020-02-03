@@ -17,7 +17,7 @@ interface PropTypes {
 const EventListItem: React.FC<PropTypes> = props => {
 	return (
 		<div className={`event-item ${props.relativeDayTime}`}>
-			<div className="event-item-content" style={{ height: EVENT_LIST_ITEM_HEIGHT }}>
+			<div className="event-item-content" style={{ minHeight: EVENT_LIST_ITEM_HEIGHT }}>
 				<svg className="category-circle" height="12" width="12">
 					<circle cx="6" cy="6" r="6" fill={EventCategoryColor[props.event.category] || Color.Overflow} />
 				</svg>

@@ -13,14 +13,6 @@
 	transition: transform 0.2s;
 }
 
-.event-item.present .event-item-content {
-	transform: translateX(16px);
-}
-
-.event-item.present .event-item-content:hover {
-	transform: translateX(20px);
-}
-
 .event-item-content:hover {
 	transform: translateX(4px);
 }
@@ -46,7 +38,7 @@
 .event-item-content > .active-circle {
 	position: absolute;
 	top: 40%;
-	right: 64px;
+	right: 32px;
 	border-radius: 50%;
 	animation-name: pulse;
 	animation-duration: 1.5s;

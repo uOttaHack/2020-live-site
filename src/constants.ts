@@ -7,7 +7,7 @@ import MapView from './views/MapView';
 import FoodMenuView from './views/FoodMenuView';
 import ContactView from './views/ContactView';
 
-const SHOW_AS_LIVE_DATES = false;
+const SHOW_AS_LIVE_DATES = true;
 const MOBILE_BREAKPOINT_WIDTH = 992;
 const ONE_MINUTE_MILLISECOND = 60000;
 const EVENT_LIST_ITEM_HEIGHT = 72;

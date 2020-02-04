@@ -15,7 +15,13 @@ const FoodMenuView: React.FC = () => {
 					</span>
 				</h4>
 				<h3>Day 1: Friday February 7th</h3>
-				<h4>Dinner - Shawarma Express</h4>
+				<h4>
+					Dinner{' '}
+					<span role="img" aria-label="shawarma emoji">
+						🌯
+					</span>
+				</h4>
+				<h5>Shawarma Express</h5>
 				<ul>
 					<li>
 						<b>Beef/Chicken/Falafel:</b> white pepper, sumac, cardamom, cinnamon, lemon juice, canola oil,
@@ -32,13 +38,24 @@ const FoodMenuView: React.FC = () => {
 					<li>Pita</li>
 				</ul>
 				<h3>Day 2: Saturday February 8th</h3>
-				<h4>Breakfast</h4>
+				<h4>
+					Breakfast{' '}
+					<span role="img" aria-label="croissant emoji">
+						🥐
+					</span>
+				</h4>
 				<ul>
-					<li>Baked goods such as croissants, toast, muffins and so on</li>
-					<li>Bagels & cream cheese</li>
-					<li>Fruit</li>
+					<li>Baked goods such as muffins, croissants, braided apple turnovers, mini chocolatines</li>
+					<li>Kettleman's bagels & cream cheese</li>
+					<li>Apples, clementines, bananas</li>
 				</ul>
-				<h4>Lunch - Raon Kitchen (Korean Bibimbap)</h4>
+				<h4>
+					Lunch{' '}
+					<span role="img" aria-label="bento emoji">
+						🍱
+					</span>
+				</h4>
+				<h5>Raon Kitchen (Korean Bibimbap)</h5>
 				<ul>
 					<li>
 						<b>Beef:</b> beef, white/black rice, black pepper, garlic, ginger, green onion, onion, pear,
@@ -60,7 +77,13 @@ const FoodMenuView: React.FC = () => {
 						vegetable oil, green cabbage, carrot, spinach, mushroom, egg, kimchi
 					</li>
 				</ul>
-				<h4>Dinner - Chillies (Indian)</h4>
+				<h4>
+					Dinner{' '}
+					<span role="img" aria-label="plate emoji">
+						🍛
+					</span>
+				</h4>
+				<h5>Chillies (Indian)</h5>
 				<ul>
 					<li>
 						<b>Butter chicken:</b> butter, tomatoes, ginger, garlic, coriander roots, onion
@@ -84,18 +107,33 @@ const FoodMenuView: React.FC = () => {
 					<li>Basmati Rice</li>
 				</ul>
 				<h3>Day 3: Sunday February 9th</h3>
-				<h4>Breakfast</h4>
+				<h4>
+					Breakfast{' '}
+					<span role="img" aria-label="pancake emoji">
+						🥞
+					</span>
+				</h4>
 				<ul>
-					<li>Baked goods such as croissants, toast, muffins and so on</li>
-					<li>Pancakes</li>
-					<li>Fruit</li>
-				</ul>
-				<h4>Lunch - La Bottega (Italian Sandwiches)</h4>
-				<ul>
+					<li>Baked goods such as muffins, croissants, braided apple turnovers, mini chocolatines</li>
+					<li>Kettleman's bagels & cream cheese</li>
+					<li>Apples, clementines, bananas</li>
 					<li>
-						Assortment of our popular sandwiches made on a classic cirioli bun. Marinated eggplant, olives,
-						hot peppers, mayonnaise and mustard served on the side.
+						Pancakes{' '}
+						<span role="img" aria-label="eyes emoji">
+							👀
+						</span>
 					</li>
+				</ul>
+				<h4>
+					Lunch{' '}
+					<span role="img" aria-label="sandwich emoji">
+						🥪
+					</span>
+				</h4>
+				<h5>La Bottega (Italian Sandwiches)</h5>
+				<ul>
+					<li>Assorted sandwiches made on a classic cirioli bun</li>
+					<li>Marinated eggplant, olives, hot peppers, mayonnaise and mustard served on the side.</li>
 				</ul>
 			</Col>
 		</Container>

@@ -73,7 +73,7 @@ export const secondDay: IEventDay = {
 	date: new Date('2020-02-08T00:00:00-05:00'),
 	events: [
 		{
-			name: 'Midnight Snack',
+			name: 'Midnight Snack sponsored by RBR',
 			start: new Date('2020-02-08T00:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,

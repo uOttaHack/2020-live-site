@@ -32,6 +32,8 @@ const InfoView: React.FC = () => {
 						This network is in the CRX building only. It is an open connection with no authentication
 						required.
 					</p>
+					<h2>Challenges</h2>
+					<p>To be announced during the event.</p>
 				</div>
 			</Col>
 		</Container>

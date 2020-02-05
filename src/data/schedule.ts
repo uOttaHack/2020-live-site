@@ -8,11 +8,11 @@ export const firstDay: IEventDay = {
 	date: new Date('2020-02-07T00:00:00-05:00'),
 	events: [
 		{
-			name: 'Registration Opens',
+			name: 'Registration',
 			start: new Date('2020-02-07T17:00:00-05:00'),
-			duration: 0,
+			duration: 300,
 			category: EventCategory.Default,
-			location: Location.None,
+			location: Location.Lobby,
 			description: ''
 		},
 		{
@@ -27,7 +27,7 @@ export const firstDay: IEventDay = {
 			name: 'Opening Ceremony',
 			start: new Date('2020-02-07T20:00:00-05:00'),
 			duration: 60,
-			category: EventCategory.Default,
+			category: EventCategory.Activity,
 			location: Location.UCU,
 			description: ''
 		},
@@ -59,7 +59,7 @@ export const firstDay: IEventDay = {
 			name: 'Intro to Git',
 			start: new Date('2020-02-07T23:30:00-05:00'),
 			duration: 30,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
 			description: 'By Brennan McDonald'
 		}
@@ -84,7 +84,7 @@ export const secondDay: IEventDay = {
 			name: 'Intro to Machine Learning Workshop',
 			start: new Date('2020-02-08T00:30:00-05:00'),
 			duration: 60,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
 			description: 'By Chris Wang'
 		},
@@ -92,7 +92,7 @@ export const secondDay: IEventDay = {
 			name: 'Intro to React Workshop',
 			start: new Date('2020-02-08T01:30:00-05:00'),
 			duration: 60,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop2,
 			location: Location.WorkshopC409,
 			description: 'By Daniel Wu'
 		},
@@ -108,7 +108,7 @@ export const secondDay: IEventDay = {
 			name: 'Solace Workshop',
 			start: new Date('2020-02-08T08:00:00-05:00'),
 			duration: 60,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC408,
 			description: ''
 		},
@@ -116,7 +116,7 @@ export const secondDay: IEventDay = {
 			name: 'DRDC Workshop',
 			start: new Date('2020-02-08T09:00:00-05:00'),
 			duration: 30,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop2,
 			location: Location.WorkshopC409,
 			description: ''
 		},
@@ -132,7 +132,7 @@ export const secondDay: IEventDay = {
 			name: 'Deloitte Workshop',
 			start: new Date('2020-02-08T10:30:00-05:00'),
 			duration: 30,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
 			description: ''
 		},
@@ -140,7 +140,7 @@ export const secondDay: IEventDay = {
 			name: 'SurveyMonkey Workshop',
 			start: new Date('2020-02-08T11:00:00-05:00'),
 			duration: 30,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop2,
 			location: Location.WorkshopC408,
 			description: ''
 		},
@@ -172,7 +172,7 @@ export const secondDay: IEventDay = {
 			name: 'Innovapost Workshop',
 			start: new Date('2020-02-08T14:00:00-05:00'),
 			duration: 90,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
 			description: ''
 		},
@@ -185,10 +185,10 @@ export const secondDay: IEventDay = {
 			description: 'Meet at the lobby before heading to the canal.'
 		},
 		{
-			name: 'Workshop',
+			name: 'ADGA Workshop',
 			start: new Date('2020-02-08T17:00:00-05:00'),
-			duration: 0,
-			category: EventCategory.Workshop,
+			duration: 30,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
 			description: ''
 		},
@@ -212,7 +212,7 @@ export const secondDay: IEventDay = {
 			name: 'Workshop',
 			start: new Date('2020-02-08T20:30:00-05:00'),
 			duration: 60,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
 			description: ''
 		},
@@ -253,7 +253,7 @@ export const thirdDay: IEventDay = {
 			name: 'Workshop',
 			start: new Date('2020-02-09T01:00:00-05:00'),
 			duration: 0,
-			category: EventCategory.Workshop,
+			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
 			description: ''
 		},
@@ -301,7 +301,7 @@ export const thirdDay: IEventDay = {
 			name: 'Closing Ceremonies',
 			start: new Date('2020-02-09T13:30:00-05:00'),
 			duration: 0,
-			category: EventCategory.Default,
+			category: EventCategory.Activity,
 			location: Location.UCU,
 			description: ''
 		},

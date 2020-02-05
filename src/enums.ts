@@ -1,7 +1,8 @@
 export enum EventCategory {
 	Default = 'default',
 	Food = 'food',
-	Workshop = 'workshop',
+	Workshop1 = 'workshop1',
+	Workshop2 = 'workshop2',
 	Activity = 'activity',
 	Career = 'career',
 	Hacker = 'hacker'
@@ -12,7 +13,8 @@ export const EventCategoryColor: {
 } = {
 	[EventCategory.Default]: 'grey',
 	[EventCategory.Food]: 'deepskyblue',
-	[EventCategory.Workshop]: 'purple',
+	[EventCategory.Workshop1]: 'purple',
+	[EventCategory.Workshop2]: 'purple',
 	[EventCategory.Activity]: 'lightpink',
 	[EventCategory.Career]: 'indianred',
 	[EventCategory.Hacker]: 'lightgreen'
@@ -30,7 +32,7 @@ export enum RoutePath {
 
 export enum Location {
 	None = '',
-	CareerFair = 'South floor 0',
+	CareerFair = '1st floor',
 	WorkshopC408 = 'Workshop Room C408',
 	WorkshopC409 = 'Workshop Room C409',
 	Staging = 'Staging - First Floor Classroom',

@@ -144,13 +144,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 									}}
 									onClick={() => this.handleEventListItemClick(event)}
 								>
-									<p
-										style={{
-											width: event.duration === 0 ? labelSpaceHorizontal : '100%'
-										}}
-									>
-										{event.name}
-									</p>
+									<p>{event.name}</p>
 									<div
 										key={`timeline-track-${activityKey}-${eventIndex}`}
 										className="timeline-track-line"

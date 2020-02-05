@@ -78,7 +78,7 @@ export const secondDay: IEventDay = {
 			duration: 90,
 			category: EventCategory.Food,
 			location: Location.Food,
-			description: 'Ice cream and cookies sponsored by RBR'
+			description: ''
 		},
 		{
 			name: 'Intro to Machine Learning Workshop',
@@ -242,12 +242,12 @@ export const thirdDay: IEventDay = {
 	date: new Date('2020-02-09T00:00:00-05:00'),
 	events: [
 		{
-			name: 'Midnight Snack',
+			name: 'Midnight Snack sponsored by RBR',
 			start: new Date('2020-02-09T00:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Food,
 			location: Location.Food,
-			description: 'Bubble tea'
+			description: ''
 		},
 		{
 			name: 'Workshop',

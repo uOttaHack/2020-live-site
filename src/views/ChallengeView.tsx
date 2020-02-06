@@ -22,7 +22,12 @@ const ChallengeView: React.FC = () => {
 						found in the real world.
 					</li>
 				</ul>
-				<h4>FinTech Track</h4>
+				<h4>
+					FinTech Track{' '}
+					<span role="img" aria-label="bank">
+						🏦
+					</span>
+				</h4>
 				<p>
 					Financial technology has become a rapidly growing industry that serves both consumers and
 					businesses. Recent years have seen the rise of products aimed at improving financial literacy,
@@ -30,7 +35,12 @@ const ChallengeView: React.FC = () => {
 					improve on existing financial infrastructure, bring new innovations in the sector for consumers, and
 					apply modern technology to the traditional financial world.
 				</p>
-				<h4>HealthTech Track</h4>
+				<h4>
+					HealthTech Track{' '}
+					<span role="img" aria-label="hospital emoji">
+						🏥
+					</span>
+				</h4>
 				<p>
 					Health technology is a broad industry that includes any products or services that improve the
 					delivery, payment, and consumption of care. Companies in this sector aim at innovating the crucial
@@ -40,7 +50,12 @@ const ChallengeView: React.FC = () => {
 					medical practitioners, and bring new concepts to an industry where patient safety is the highest
 					priority.
 				</p>
-				<h4>Smart Delivery Track - Sponsored by InnovaPost</h4>
+				<h4>
+					Smart Delivery Track - Sponsored by InnovaPost{' '}
+					<span role="img" aria-label="truck emoji">
+						🚚
+					</span>
+				</h4>
 				<p>
 					Today’s extremely fast pace of e-commerce has created an even greater demand for highly efficient
 					delivery systems, where consumers expect short delivery times without any risk of delays. Delivery

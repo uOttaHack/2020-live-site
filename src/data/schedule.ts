@@ -94,7 +94,7 @@ export const secondDay: IEventDay = {
 			duration: 60,
 			category: EventCategory.Workshop2,
 			location: Location.WorkshopC409,
-			description: 'Hosted by Daniel Wu (Google Developer Intern).'
+			description: 'Hosted by Daniel Wu (Google Developer Intern) and Tommy Deng.'
 		},
 		{
 			name: 'Breakfast',

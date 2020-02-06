@@ -11,12 +11,17 @@ const InfoView: React.FC = () => {
 			<Col>
 				<Row className="links">
 					<Col>
-						<a href="https://uottahack2020.slack.com">
+						<a href="https://join.slack.com/t/uottahack2020/shared_invite/enQtOTE5ODM3NzkxODkzLWI4Yjk1NDYxMWU0ZDdlMGU5ODk0YTc1NDU3ZGE0MzM2MDRiZWU0MTA3OWNiNGUwOWRlMGFkMTA3Y2Y2ZDk3YWE">
 							<img
 								className="rounded"
 								src={require('../assets/images/slack.png')}
 								alt="Slack channel link"
 							/>
+						</a>
+					</Col>
+					<Col>
+						<a href="https://uottahack3.devpost.com/">
+							<img src={require('../assets/images/devpost.png')} alt="Devpost link" />
 						</a>
 					</Col>
 				</Row>
@@ -32,8 +37,6 @@ const InfoView: React.FC = () => {
 						This network is in the CRX building only. It is an open connection with no authentication
 						required.
 					</p>
-					<h2>Challenges</h2>
-					<p>To be announced during the event.</p>
 					<h2>Free stuff!</h2>
 					<p>Hackers will get:</p>
 					<ul className="free-stuff">

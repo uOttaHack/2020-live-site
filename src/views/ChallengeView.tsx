@@ -7,7 +7,7 @@ const ChallengeView: React.FC = () => {
 	return (
 		<Container id="contact-view" fluid>
 			<Col>
-				<h2>Tracks & Challenges</h2>
+				<h2>Tracks</h2>
 				<p>
 					At uOttaHack 3, we’re encouraging hackers to enter into one of our three hacking tracks, broad
 					categories that represent real life industries in tech and build their projects around them. Hackers
@@ -64,6 +64,20 @@ const ChallengeView: React.FC = () => {
 					items to your doorstep in a matter of hours. Projects in this track should aim at taking delivery to
 					its' innovation, introducing delivery tech to completely new industry, and applying modern
 					technology (hardware or software) to the delivery pipeline.
+				</p>
+				<h2>Challenges</h2>
+				<h4>Solace</h4>
+				<p>
+					Build your hack using Solace PubSub+ message broker technology. The Solace PubSub+ message broker
+					allows your applications to communicate with each other through a publish/subscribe interface over
+					multiple messaging protocols (MQTT, AMQP, REST, SMF) via our Solace PubSub+ Cloud service. The best
+					hack selected by Solace judges will win 4 sets of Apple Airpods! Join Solace engineers at our
+					workshop Saturday at 8:00am for a hands-on workshop where you can learn how to integrate compatible
+					messaging APIs into your applications. Drop by our booth Friday night to talk ideas and architecture
+					for your hack and to get your Solace PubSub+ Cloud account. Check out our hackathon website (
+					<a href="http://uottahack.solace.cloud">http://uottahack.solace.cloud</a>) for example applications
+					and ideas to kickstart your hacks. Ping us on Slack if you can’t find us in person and we can help
+					get your Solace PubSub+ accounts setup from there too.
 				</p>
 			</Col>
 		</Container>

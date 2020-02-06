@@ -1,9 +1,9 @@
 import React from 'react';
 import './EventListComponent.css';
 
-import { ONE_MINUTE_MILLISECOND, EVENT_LIST_ITEM_HEIGHT } from '../constants';
+import { EVENT_LIST_ITEM_HEIGHT } from '../constants';
 import { PropTypesDay, IEvent } from '../interfaces';
-import { to12HourTime, dateToMinutesInDay, getRelativeEventTime } from '../utils';
+import { dateToMinutesInDay, getRelativeEventTime, formattedEventTime } from '../utils';
 
 import EventListItem from './EventListItem';
 import ModalDialog from '../components/ModalDialog';
@@ -66,12 +66,7 @@ class EventListComponent extends React.Component<PropTypesDay> {
 	handleEventListItemClick(event: IEvent) {
 		this.setState({
 			modalShow: true,
-			modalFormattedTime:
-				event.duration === 0
-					? to12HourTime(event.start)
-					: `${to12HourTime(event.start)} - ${to12HourTime(
-							new Date(event.start.getTime() + event.duration * ONE_MINUTE_MILLISECOND)
-					  )}`,
+			modalFormattedTime: formattedEventTime(event),
 			selectedEvent: event
 		});
 	}

@@ -19,7 +19,9 @@ const ModalDialog: React.FC<PropTypes> = props => {
 	return (
 		<Modal show={props.show} onHide={props.onHide} centered>
 			<Modal.Header closeButton>
-				<Modal.Title>{props.event.name}</Modal.Title>
+				<Modal.Title>
+					{props.event.name} {props.event.subtitle && `- ${props.event.subtitle}`}
+				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
 				<p>
@@ -38,15 +40,7 @@ const ModalDialog: React.FC<PropTypes> = props => {
 						<span>{props.event.location}</span>
 					</p>
 				)}
-				{props.event.description && (
-					<p>
-						<span role="img" aria-label="memo emoji">
-							📝
-						</span>
-						&nbsp;
-						{props.event.description}
-					</p>
-				)}
+				{props.event.description && <p>{props.event.description}</p>}
 			</Modal.Body>
 		</Modal>
 	);

@@ -34,6 +34,39 @@ const InfoView: React.FC = () => {
 					</p>
 					<h2>Challenges</h2>
 					<p>To be announced during the event.</p>
+					<h2>Free stuff!</h2>
+					<p>Hackers will get:</p>
+					<ul className="free-stuff">
+						<li>
+							<b>Voiceflow</b>
+							<p>Free year of business plan license for every hacker (valued at $99/month)</p>
+						</li>
+						<li>
+							<b>DigitalOcean</b>
+							<p>
+								$50, 30-day free trial for all attendees using this link:{' '}
+								<a href="https://do.co/studenthackathon">do.co/studenthackathon</a>
+							</p>
+						</li>
+						<li>
+							<b>Balsamiq</b>
+							<p>
+								Promo Code:&nbsp;
+								<code>BQCVZWFUV020620</code>
+							</p>
+							<p>
+								<span>
+									Product: <a href="https://balsamiq.cloud/">Balsamiq Cloud</a>
+								</span>
+							</p>
+							<p>Code Expiration: June 01, 2020</p>
+							<p>
+								<a href="https://support.balsamiq.com/sales/cloudpromo/">
+									Instructions for promo code redemption
+								</a>
+							</p>
+						</li>
+					</ul>
 				</div>
 			</Col>
 		</Container>

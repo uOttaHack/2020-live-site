@@ -1,12 +1,12 @@
 import React from 'react';
 import './EventListItem.css';
 
-import { ONE_MINUTE_MILLISECOND, EVENT_LIST_ITEM_HEIGHT } from '../constants';
+import { EVENT_LIST_ITEM_HEIGHT } from '../constants';
 import { EventCategoryColor, RelativeTime } from '../enums';
 import Color from '../colors';
 
 import { IEvent } from '../interfaces';
-import { to12HourTime } from '../utils';
+import { formattedEventTime } from '../utils';
 
 interface PropTypes {
 	event: IEvent;
@@ -28,13 +28,7 @@ const EventListItem: React.FC<PropTypes> = props => {
 				)}
 
 				<h6>{props.event.name}</h6>
-				<p>
-					{props.event.duration === 0
-						? to12HourTime(props.event.start)
-						: `${to12HourTime(props.event.start)} - ${to12HourTime(
-								new Date(props.event.start.getTime() + props.event.duration * ONE_MINUTE_MILLISECOND)
-						  )}`}
-				</p>
+				<p>{formattedEventTime(props.event)}</p>
 			</div>
 		</div>
 	);

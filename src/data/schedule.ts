@@ -61,7 +61,7 @@ export const firstDay: IEventDay = {
 			duration: 30,
 			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
-			description: 'By Brennan McDonald'
+			description: 'Hosted by Brennan McDonald (Amazon Developer Intern).'
 		}
 	]
 };
@@ -78,7 +78,7 @@ export const secondDay: IEventDay = {
 			duration: 90,
 			category: EventCategory.Food,
 			location: Location.Food,
-			description: ''
+			description: 'Ice cream and cookies'
 		},
 		{
 			name: 'Intro to Machine Learning Workshop',
@@ -86,7 +86,7 @@ export const secondDay: IEventDay = {
 			duration: 60,
 			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
-			description: 'By Chris Wang'
+			description: 'Hosted by Chris Wang.'
 		},
 		{
 			name: 'Intro to React Workshop',
@@ -94,7 +94,7 @@ export const secondDay: IEventDay = {
 			duration: 60,
 			category: EventCategory.Workshop2,
 			location: Location.WorkshopC409,
-			description: 'By Daniel Wu'
+			description: 'Hosted by Daniel Wu (Google Developer Intern).'
 		},
 		{
 			name: 'Breakfast',
@@ -106,19 +106,23 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Solace Workshop',
+			subtitle: 'Event Driven Applications',
 			start: new Date('2020-02-08T08:00:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop1,
 			location: Location.WorkshopC408,
-			description: ''
+			description:
+				'Join Solace engineers to learn more about the benefit of event driven applications. Bring your laptops as we’ll be walking through a tutorial of how to build an app connected to the Solace PubSub+ message broker in Solace PubSub+ Cloud. Come with your questions ready as we’ll have multiple engineers on hand to answer them. Remember if you build your hack with Solace PubSub+, you’ll have your chance to win Solace’s hackathon challenge and 4 sets of Apple AirPods!'
 		},
 		{
 			name: 'DRDC Workshop',
+			subtitle: 'Science, tech and innovation at DND for the nation’s defense and security',
 			start: new Date('2020-02-08T09:00:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop2,
 			location: Location.WorkshopC409,
-			description: ''
+			description:
+				'Defence Research and Development Canada (DRDC) is the science and technology agency for the Department of National Defence (DND). DRDC works closely with the Canadian Special Operations Forces Command (CANSOFCOM) and other military partners to provide cutting edge technology and advice in matters of national security. DRDC scientists and CANSOFCOM staff will give an overview of some of their (unclassified!) work, especially work that has recently been done by students working at DND. We are looking for more talented students to join us in the summer and beyond.'
 		},
 		{
 			name: 'Pet Therapy',
@@ -190,7 +194,8 @@ export const secondDay: IEventDay = {
 			duration: 30,
 			category: EventCategory.Workshop1,
 			location: Location.WorkshopC409,
-			description: ''
+			description:
+				'Presenting on their work using Tensorflow machine learning to detect ocean going vessels from space.'
 		},
 		{
 			name: 'Dinner',
@@ -247,7 +252,7 @@ export const thirdDay: IEventDay = {
 			duration: 90,
 			category: EventCategory.Food,
 			location: Location.Food,
-			description: ''
+			description: 'Bubble tea'
 		},
 		{
 			name: 'Workshop',

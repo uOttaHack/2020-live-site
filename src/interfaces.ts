@@ -2,6 +2,7 @@ import { EventCategory, RoutePath, RelativeTime } from './enums';
 
 export interface IEvent {
 	name: string;
+	subtitle?: string;
 	start: Date;
 	duration: number;
 	category: EventCategory;

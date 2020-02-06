@@ -1,11 +1,13 @@
 import { RoutePath } from './enums';
 import { IRouteItem } from './interfaces';
 
-import InfoView from './views/InfoView';
 import ScheduleView from './views/ScheduleView';
+import InfoView from './views/InfoView';
+import WorkshopView from './views/WorkshopView';
 import MapView from './views/MapView';
 import FoodMenuView from './views/FoodMenuView';
 import ContactView from './views/ContactView';
+import ChallengeView from './views/ChallengeView';
 
 const SHOW_AS_LIVE_DATES = true;
 const MOBILE_BREAKPOINT_WIDTH = 992;
@@ -21,6 +23,16 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 		path: RoutePath.Info,
 		title: 'Information',
 		component: InfoView
+	},
+	{
+		path: RoutePath.Challenge,
+		title: 'Challenges',
+		component: ChallengeView
+	},
+	{
+		path: RoutePath.Workshop,
+		title: 'Workshops',
+		component: WorkshopView
 	},
 	{
 		path: RoutePath.Map,

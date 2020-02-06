@@ -3,9 +3,8 @@ import './TimelineComponent.css';
 
 import { PropTypesDay, IEvent, ICategoryEventList } from '../interfaces';
 import { EventCategoryColor, EventCategory } from '../enums';
-import { identity, to12HourTime, getRelativeEventTime, dateToMinutesInDay } from '../utils';
+import { identity, getRelativeEventTime, dateToMinutesInDay, formattedEventTime } from '../utils';
 import Color from '../colors';
-import { ONE_MINUTE_MILLISECOND } from '../constants';
 
 import ModalDialog from '../components/ModalDialog';
 
@@ -70,12 +69,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 	handleEventListItemClick(event: IEvent) {
 		this.setState({
 			modalShow: true,
-			modalFormattedTime:
-				event.duration === 0
-					? to12HourTime(event.start)
-					: `${to12HourTime(event.start)} - ${to12HourTime(
-							new Date(event.start.getTime() + event.duration * ONE_MINUTE_MILLISECOND)
-					  )}`,
+			modalFormattedTime: formattedEventTime(event),
 			selectedEvent: event
 		});
 	}

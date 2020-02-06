@@ -14,7 +14,7 @@ const FoodMenuView: React.FC = () => {
 						☕️
 					</span>
 				</h4>
-				<h3>Day 1: Friday February 7th</h3>
+				<h3>Day 1 - Friday February 7</h3>
 				<h4>
 					Dinner{' '}
 					<span role="img" aria-label="shawarma emoji">
@@ -37,7 +37,7 @@ const FoodMenuView: React.FC = () => {
 					<li>Rice</li>
 					<li>Pita</li>
 				</ul>
-				<h3>Day 2: Saturday February 8th</h3>
+				<h3>Day 2 - Saturday February 8</h3>
 				<h4>
 					Breakfast{' '}
 					<span role="img" aria-label="croissant emoji">
@@ -106,7 +106,7 @@ const FoodMenuView: React.FC = () => {
 					</li>
 					<li>Basmati Rice</li>
 				</ul>
-				<h3>Day 3: Sunday February 9th</h3>
+				<h3>Day 3 - Sunday February 9</h3>
 				<h4>
 					Breakfast{' '}
 					<span role="img" aria-label="pancake emoji">

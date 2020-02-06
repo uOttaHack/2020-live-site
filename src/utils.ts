@@ -1,5 +1,6 @@
 import { IEvent } from './interfaces';
 import { RelativeTime } from './enums';
+import { ONE_MINUTE_MILLISECOND } from './constants';
 
 export function identity<T>(arg: T): T {
 	return arg;
@@ -46,4 +47,12 @@ export function getRelativeEventTime(event: IEvent): RelativeTime {
 	} else {
 		return RelativeTime.Present;
 	}
+}
+
+export function formattedEventTime(event: IEvent) {
+	return event.duration === 0
+		? to12HourTime(event.start)
+		: `${to12HourTime(event.start)} - ${to12HourTime(
+				new Date(event.start.getTime() + event.duration * ONE_MINUTE_MILLISECOND)
+		  )}`;
 }

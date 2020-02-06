@@ -8,3 +8,11 @@
 	margin-top: 16px;
 	margin-bottom: 32px;
 }
+
+.free-stuff p {
+	margin: 0;
+}
+
+.free-stuff li {
+	margin-bottom: 12px;
+}

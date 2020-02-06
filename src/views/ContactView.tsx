@@ -11,7 +11,7 @@ const ContactView: React.FC = () => {
 				<h4>Paul Lee - Organizer</h4>
 				<p>(519) - 410 - 8070</p>
 				<h4>Hamza Basrai - Organizer</h4>
-				<p>(416) - 803 - 7665</p>
+				<p>(647) - 332 - 7665</p>
 				<b>*For life threatening emergencies please call 911</b>
 			</Col>
 		</Container>

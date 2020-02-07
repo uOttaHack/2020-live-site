@@ -43,6 +43,7 @@ const InfoView: React.FC = () => {
 						<li>
 							<b>Voiceflow</b>
 							<p>Free year of business plan license for every hacker (valued at $99/month)</p>
+							<a href="https://www.voiceflow.com/hackathon/uottahack">Register Here!</a>
 						</li>
 						<li>
 							<b>DigitalOcean</b>

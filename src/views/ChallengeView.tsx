@@ -72,10 +72,13 @@ const ChallengeView: React.FC = () => {
 					Canadians who need them the most. Our government clients understand that programs and services made
 					available to youth are difficult to access and understand, especially for some vulnerable
 					populations. What marketing initiatives, tools and platforms could best support this objective and
-					the strategy of the Government of Canada? Ideas could include: A Facebook Messenger bot to answer
-					program eligibility questions A web-based aggregator of youth programs A personal account to manage
-					program enrolments And anything else you can come up with!
+					the strategy of the Government of Canada? Ideas could include:
 				</p>
+				<ul>
+					<li>A Facebook Messenger bot to answer program eligibility questions</li>
+					<li>A web-based aggregator of youth programs</li>
+					<li>A personal account to manage program enrolments And anything else you can come up with!</li>
+				</ul>
 				<p>
 					<a href="https://drive.google.com/file/d/0B4AhhbtuQPaaVC1qUGtLV0xVZUQtUXpMZm9zcUdWeFo0SHUw/view?usp=sharing">
 						Link to the full slide deck

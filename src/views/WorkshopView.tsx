@@ -26,8 +26,8 @@ const WorkshopView: React.FC = () => {
 					<h5>
 						{event.name} {event.subtitle && `- ${event.subtitle}`}
 					</h5>
-					<div className="event-content-body">
-						<p>
+					<ul>
+						<li>
 							<span role="img" aria-label="clock emoji">
 								{
 									(event.start.getMinutes() < 30 ? CLOCK_EMOJI_HOUR_LIST : CLOCK_EMOJI_THIRTY_LIST)[
@@ -36,9 +36,9 @@ const WorkshopView: React.FC = () => {
 								}
 							</span>
 							&nbsp;{formattedEventTime(event)}
-						</p>
-						<p>{event.description}</p>
-					</div>
+						</li>
+						{event.description && <li>{event.description}</li>}
+					</ul>
 				</div>
 			));
 

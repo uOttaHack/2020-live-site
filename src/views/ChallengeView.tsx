@@ -66,6 +66,21 @@ const ChallengeView: React.FC = () => {
 					technology (hardware or software) to the delivery pipeline.
 				</p>
 				<h2>Challenges</h2>
+				<h4>Deloitte</h4>
+				<p>
+					We want you to conceptualize how the Government could connect youth programs and services to
+					Canadians who need them the most. Our government clients understand that programs and services made
+					available to youth are difficult to access and understand, especially for some vulnerable
+					populations. What marketing initiatives, tools and platforms could best support this objective and
+					the strategy of the Government of Canada? Ideas could include: A Facebook Messenger bot to answer
+					program eligibility questions A web-based aggregator of youth programs A personal account to manage
+					program enrolments And anything else you can come up with!
+				</p>
+				<p>
+					<a href="https://drive.google.com/file/d/0B4AhhbtuQPaaVC1qUGtLV0xVZUQtUXpMZm9zcUdWeFo0SHUw/view?usp=sharing">
+						Link to the full slide deck
+					</a>
+				</p>
 				<h4>Solace</h4>
 				<p>
 					Build your hack using Solace PubSub+ message broker technology. The Solace PubSub+ message broker

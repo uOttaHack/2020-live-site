@@ -142,6 +142,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'SurveyMonkey Workshop',
+			subtitle: 'Engineering & Life at SurveyMonkey',
 			start: new Date('2020-02-08T11:00:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop2,
@@ -174,6 +175,7 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Innovapost Workshop',
+			subtitle: 'Creating AI Powered Mobile Apps',
 			start: new Date('2020-02-08T14:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Workshop1,

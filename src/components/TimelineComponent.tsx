@@ -2,11 +2,12 @@ import React from 'react';
 import './TimelineComponent.css';
 
 import { PropTypesDay, IEvent, ICategoryEventList } from '../interfaces';
-import { EventCategoryColor, EventCategory } from '../enums';
+import { EventCategoryColor } from '../enums';
 import { identity, getRelativeEventTime, dateToMinutesInDay, formattedEventTime } from '../utils';
 import Color from '../colors';
 
 import ModalDialog from '../components/ModalDialog';
+import { DUMMY_EVENT } from '../constants';
 
 const minutes = 60;
 const timeLabelOffset = 4;
@@ -39,14 +40,7 @@ class TimelineComponent extends React.Component<PropTypesDay> {
 		this.state = {
 			modalShow: false,
 			modalFormattedTime: '',
-			selectedEvent: {
-				name: '',
-				start: new Date(),
-				duration: 0,
-				category: EventCategory.Default,
-				location: '',
-				description: ''
-			}
+			selectedEvent: DUMMY_EVENT
 		};
 	}
 

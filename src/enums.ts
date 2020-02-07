@@ -35,15 +35,16 @@ export enum RoutePath {
 export enum Location {
 	None = '',
 	CareerFair = '1st floor',
-	WorkshopC408 = 'Workshop Room C408',
-	WorkshopC409 = 'Workshop Room C409',
+	WorkshopC308 = 'Workshop Room C308',
+	WorkshopC309 = 'Workshop Room C309',
 	Staging = 'Staging - First Floor Classroom',
 	Lobby = 'Lobby',
-	Chill = 'REST Room - 5th floor',
+	REST = 'REST Room - 5th floor',
 	UCU = 'UCU - follow guides to different building',
-	Food = 'Food Room C308',
+	Food = 'Food Room C307',
 	Demo = 'C140',
-	Canal = 'Rideau Canal'
+	Canal = 'Rideau Canal',
+	CRX = 'CRX'
 }
 
 export enum RelativeTime {

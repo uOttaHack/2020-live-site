@@ -1,5 +1,5 @@
-import { RoutePath } from './enums';
-import { IRouteItem } from './interfaces';
+import { RoutePath, EventCategory } from './enums';
+import { IRouteItem, IEvent } from './interfaces';
 
 import ScheduleView from './views/ScheduleView';
 import InfoView from './views/InfoView';
@@ -53,6 +53,15 @@ const ROUTES_WITH_TITLES: IRouteItem[] = [
 const CLOCK_EMOJI_HOUR_LIST = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚'];
 const CLOCK_EMOJI_THIRTY_LIST = ['🕧', '🕜', '🕝', '🕞', '🕟', '🕠', '🕡', '🕢', '🕣', '🕤', '🕥', '🕦'];
 
+const DUMMY_EVENT: IEvent = {
+	name: '',
+	start: new Date(),
+	duration: 0,
+	category: EventCategory.Default,
+	location: '',
+	description: ''
+};
+
 export {
 	SHOW_AS_LIVE_DATES,
 	MOBILE_BREAKPOINT_WIDTH,
@@ -60,5 +69,6 @@ export {
 	EVENT_LIST_ITEM_HEIGHT,
 	ROUTES_WITH_TITLES,
 	CLOCK_EMOJI_HOUR_LIST,
-	CLOCK_EMOJI_THIRTY_LIST
+	CLOCK_EMOJI_THIRTY_LIST,
+	DUMMY_EVENT
 };

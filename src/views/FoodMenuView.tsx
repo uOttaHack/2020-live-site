@@ -89,7 +89,7 @@ const FoodMenuView: React.FC = () => {
 						<b>Butter chicken:</b> butter, tomatoes, ginger, garlic, coriander roots, onion
 					</li>
 					<li>
-						<b>Dal makhani:</b> tomatoes , onion , fenugreek leaves (kasoori methi) spices, contains dairy
+						<b>Dal makhani:</b> tomatoes, onion, fenugreek leaves (kasoori methi) spices, contains dairy
 					</li>
 					<li>
 						<b>Vegetable korma:</b> coconut, carrot, beans, cottage cheese, green peas onion, cauliflower,
@@ -104,7 +104,9 @@ const FoodMenuView: React.FC = () => {
 					<li>
 						<b>Raita:</b> contains dairy
 					</li>
-					<li>Basmati Rice</li>
+					<li>
+						<b>Basmati Rice</b>
+					</li>
 				</ul>
 				<h3>Day 3 - Sunday February 9</h3>
 				<h4>

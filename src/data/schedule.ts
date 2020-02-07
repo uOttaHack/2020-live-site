@@ -44,7 +44,7 @@ export const firstDay: IEventDay = {
 			start: new Date('2020-02-07T22:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Activity,
-			location: Location.None,
+			location: Location.REST,
 			description: ''
 		},
 		{
@@ -60,7 +60,7 @@ export const firstDay: IEventDay = {
 			start: new Date('2020-02-07T23:30:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop1,
-			location: Location.WorkshopC409,
+			location: Location.WorkshopC309,
 			description: 'Hosted by Brennan McDonald (Amazon Developer Intern).'
 		}
 	]
@@ -85,7 +85,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T00:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop1,
-			location: Location.WorkshopC409,
+			location: Location.WorkshopC309,
 			description: 'Hosted by Chris Wang.'
 		},
 		{
@@ -93,7 +93,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T01:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop2,
-			location: Location.WorkshopC409,
+			location: Location.WorkshopC309,
 			description: 'Hosted by Daniel Wu (Google Developer Intern) and Tommy Deng.'
 		},
 		{
@@ -110,7 +110,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T08:00:00-05:00'),
 			duration: 60,
 			category: EventCategory.Workshop1,
-			location: Location.WorkshopC408,
+			location: Location.WorkshopC309,
 			description:
 				'Join Solace engineers to learn more about the benefit of event driven applications. Bring your laptops as we’ll be walking through a tutorial of how to build an app connected to the Solace PubSub+ message broker in Solace PubSub+ Cloud. Come with your questions ready as we’ll have multiple engineers on hand to answer them. Remember if you build your hack with Solace PubSub+, you’ll have your chance to win Solace’s hackathon challenge and 4 sets of Apple AirPods!'
 		},
@@ -120,7 +120,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T09:00:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop2,
-			location: Location.WorkshopC409,
+			location: Location.WorkshopC308,
 			description:
 				'Defence Research and Development Canada (DRDC) is the science and technology agency for the Department of National Defence (DND). DRDC works closely with the Canadian Special Operations Forces Command (CANSOFCOM) and other military partners to provide cutting edge technology and advice in matters of national security. DRDC scientists and CANSOFCOM staff will give an overview of some of their (unclassified!) work, especially work that has recently been done by students working at DND. We are looking for more talented students to join us in the summer and beyond.'
 		},
@@ -130,14 +130,14 @@ export const secondDay: IEventDay = {
 			duration: 120,
 			category: EventCategory.Activity,
 			location: Location.Lobby,
-			description: 'Please bring donations.'
+			description: 'Please bring donations 🐕'
 		},
 		{
 			name: 'Deloitte Workshop',
 			start: new Date('2020-02-08T10:30:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop1,
-			location: Location.WorkshopC409,
+			location: Location.WorkshopC309,
 			description: ''
 		},
 		{
@@ -146,7 +146,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T11:00:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop2,
-			location: Location.WorkshopC408,
+			location: Location.WorkshopC308,
 			description: ''
 		},
 		{
@@ -166,11 +166,11 @@ export const secondDay: IEventDay = {
 			description: 'Raon Kitchen'
 		},
 		{
-			name: 'Startup Panel',
+			name: 'Startup Panel: Journey to Success',
 			start: new Date('2020-02-08T13:00:00-05:00'),
 			duration: 60,
 			category: EventCategory.Activity,
-			location: Location.Chill,
+			location: Location.WorkshopC308,
 			description: ''
 		},
 		{
@@ -179,7 +179,7 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T14:00:00-05:00'),
 			duration: 90,
 			category: EventCategory.Workshop1,
-			location: Location.WorkshopC409,
+			location: Location.WorkshopC309,
 			description: ''
 		},
 		{
@@ -188,14 +188,14 @@ export const secondDay: IEventDay = {
 			duration: 120,
 			category: EventCategory.Activity,
 			location: Location.Canal,
-			description: 'Meet at the lobby before heading to the canal.'
+			description: 'Meet at the lobby before heading to the canal ⛸️'
 		},
 		{
 			name: 'ADGA Workshop',
 			start: new Date('2020-02-08T17:00:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop1,
-			location: Location.WorkshopC409,
+			location: Location.WorkshopC309,
 			description:
 				'Presenting on their work using Tensorflow machine learning to detect ocean going vessels from space.'
 		},
@@ -212,29 +212,21 @@ export const secondDay: IEventDay = {
 			start: new Date('2020-02-08T19:30:00-05:00'),
 			duration: 60,
 			category: EventCategory.Activity,
-			location: Location.WorkshopC408,
+			location: Location.WorkshopC309,
 			description: ''
 		},
 		{
-			name: 'Workshop',
-			start: new Date('2020-02-08T20:30:00-05:00'),
-			duration: 60,
-			category: EventCategory.Workshop1,
-			location: Location.WorkshopC409,
-			description: ''
-		},
-		{
-			name: 'MLH Mini Event',
+			name: 'MLH Werewolf',
 			start: new Date('2020-02-08T21:00:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Activity,
-			location: Location.None,
-			description: ''
+			location: Location.Lobby,
+			description: 'MLH Mini Event'
 		},
 		{
 			name: 'Karaoke',
 			start: new Date('2020-02-08T23:00:00-05:00'),
-			duration: 0,
+			duration: 60,
 			category: EventCategory.Activity,
 			location: Location.Lobby,
 			description: ''
@@ -255,14 +247,6 @@ export const thirdDay: IEventDay = {
 			category: EventCategory.Food,
 			location: Location.Food,
 			description: 'Bubble tea'
-		},
-		{
-			name: 'Workshop',
-			start: new Date('2020-02-09T01:00:00-05:00'),
-			duration: 0,
-			category: EventCategory.Workshop1,
-			location: Location.WorkshopC409,
-			description: ''
 		},
 		{
 			name: 'Breakfast',
@@ -289,9 +273,9 @@ export const thirdDay: IEventDay = {
 			description: ''
 		},
 		{
-			name: 'Demos Start',
+			name: 'Demos',
 			start: new Date('2020-02-09T10:30:00-05:00'),
-			duration: 0,
+			duration: 120,
 			category: EventCategory.Default,
 			location: Location.Demo,
 			description: ''
@@ -307,7 +291,7 @@ export const thirdDay: IEventDay = {
 		{
 			name: 'Closing Ceremonies',
 			start: new Date('2020-02-09T13:30:00-05:00'),
-			duration: 0,
+			duration: 90,
 			category: EventCategory.Activity,
 			location: Location.UCU,
 			description: ''
@@ -317,7 +301,7 @@ export const thirdDay: IEventDay = {
 			start: new Date('2020-02-09T15:30:00-05:00'),
 			duration: 0,
 			category: EventCategory.Default,
-			location: Location.None,
+			location: Location.CRX,
 			description: ''
 		}
 	]

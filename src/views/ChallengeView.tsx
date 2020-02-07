@@ -24,8 +24,8 @@ const ChallengeView: React.FC = () => {
 				</ul>
 				<h4>
 					FinTech Track{' '}
-					<span role="img" aria-label="bank">
-						🏦
+					<span role="img" aria-label="credit card emoji">
+						💳
 					</span>
 				</h4>
 				<p>
@@ -37,8 +37,8 @@ const ChallengeView: React.FC = () => {
 				</p>
 				<h4>
 					HealthTech Track{' '}
-					<span role="img" aria-label="hospital emoji">
-						🏥
+					<span role="img" aria-label="pills emoji">
+						💊💊
 					</span>
 				</h4>
 				<p>

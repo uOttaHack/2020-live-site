@@ -9,10 +9,10 @@ const ChallengeView: React.FC = () => {
 			<Col>
 				<h2>Tracks</h2>
 				<p>
-					At uOttaHack 3, we’re encouraging hackers to enter into one of our three hacking tracks, broad
-					categories that represent real life industries in tech and build their projects around them. Hackers
-					still have complete creative freedom with what their project actually does, but they should be
-					making an effort to relate it to the specific track.
+					At uOttaHack 3, hackers are to enter into one of our three hacking tracks, broad categories that
+					represent real life industries in tech and build their projects around them. Hackers still have
+					complete creative freedom with what their project actually does, but they should be making an effort
+					to relate it to the specific track.
 				</p>
 				<h5>Details</h5>
 				<ul>
@@ -80,7 +80,7 @@ const ChallengeView: React.FC = () => {
 					<li>A personal account to manage program enrolments And anything else you can come up with!</li>
 				</ul>
 				<p>
-					<a href="https://drive.google.com/file/d/0B4AhhbtuQPaaVC1qUGtLV0xVZUQtUXpMZm9zcUdWeFo0SHUw/view?usp=sharing">
+					<a href="https://drive.google.com/file/d/1_nM7aqAfHiiXcPSjQ2gZO4Na-v0N3pSr/view?usp=sharing">
 						Link to the full slide deck
 					</a>
 				</p>

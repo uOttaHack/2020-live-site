@@ -142,12 +142,13 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'SurveyMonkey Workshop',
-			subtitle: 'Engineering & Life at SurveyMonkey',
+			subtitle: 'An Advanced React Workshop',
 			start: new Date('2020-02-08T11:00:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop2,
 			location: Location.WorkshopC308,
-			description: ''
+			description:
+				'Introduction to advanced React concepts and their practical uses (custom hooks, context, suspense, etc.). A place for students to ask questions about their React projects.'
 		},
 		{
 			name: 'Career Fair',

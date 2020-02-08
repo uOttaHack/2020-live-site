@@ -229,7 +229,7 @@ export const secondDay: IEventDay = {
 		{
 			name: 'MLH Werewolf',
 			start: new Date('2020-02-08T21:00:00-05:00'),
-			duration: 90,
+			duration: 60,
 			category: EventCategory.Activity,
 			location: Location.Lobby,
 			description: 'MLH Mini Event'

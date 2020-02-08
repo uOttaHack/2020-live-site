@@ -134,11 +134,13 @@ export const secondDay: IEventDay = {
 		},
 		{
 			name: 'Deloitte Workshop',
+			subtitle: 'Design Thinking',
 			start: new Date('2020-02-08T10:30:00-05:00'),
 			duration: 30,
 			category: EventCategory.Workshop1,
 			location: Location.WorkshopC309,
-			description: ''
+			description:
+				'Learn the principles of design thinking from one of Deloitte’s Design Thinking practitioners. Leave the workshop with the skills required to empathize with the users you’re building your challenge for. Spend time ideating how your challenge idea could be brought to life and get feedback by testing with real users. Get feedback on your challenge ideas from the Deloitte team'
 		},
 		{
 			name: 'SurveyMonkey Workshop',

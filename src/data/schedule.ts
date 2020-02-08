@@ -186,6 +186,14 @@ export const secondDay: IEventDay = {
 			description: ''
 		},
 		{
+			name: 'MNP Workshop',
+			start: new Date('2020-02-08T15:00:00-05:00'),
+			duration: 30,
+			category: EventCategory.Workshop2,
+			location: Location.WorkshopC308,
+			description: ''
+		},
+		{
 			name: 'Skating',
 			start: new Date('2020-02-08T15:30:00-05:00'),
 			duration: 120,

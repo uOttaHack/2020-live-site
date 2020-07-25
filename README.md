@@ -1,3 +1,9 @@
+# uOttaHack 2020 Live Site
+
+The live site for uOttaHack 3.
+
+![Screenshot of schedule in action](https://user-images.githubusercontent.com/20251243/88447924-87b2f780-ce06-11ea-91df-bf956f19e27c.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

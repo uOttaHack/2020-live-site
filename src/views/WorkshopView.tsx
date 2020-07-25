@@ -17,7 +17,7 @@ const days = [firstDay, secondDay, thirdDay];
 
 const WorkshopView: React.FC = () => {
 	const [show, setShow] = React.useState(false);
-	const [formattedTime, setFormattedTime] = React.useState();
+	const [formattedTime, setFormattedTime] = React.useState('');
 	const [workshop, setWorkshop] = React.useState(DUMMY_EVENT);
 
 	const filterWorkshops = (events: IEvent[]) =>
